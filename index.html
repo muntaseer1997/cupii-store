@@ -4,112 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cupii | Instant Coffee Bangladesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Satisfy&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --dark-green: #1a4731;
+            --off-white: #fbfbf8;
+            --gold: #d4af37;
+            --text-main: #333;
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #fbfbf8; /* Off-white */
-            color: #333; 
+            font-family: 'Poppins', sans-serif; 
+            background-color: var(--off-white); 
+            color: var(--text-main); 
             margin: 0; 
             padding: 0; 
+            line-height: 1.6;
         }
+
+        /* Centered Header with New Logo */
         header { 
-            background-color: #1a4731; /* Dark Green */
+            background-color: var(--dark-green); 
             color: white; 
-            padding: 30px 20px; 
+            padding: 50px 20px; 
             text-align: center; 
-            border-bottom: 5px solid #d4af37; /* Gold */
+            border-bottom: 5px solid var(--gold); 
         }
-        header h1 { 
-            margin: 0; 
-            font-size: 2.5em;
-            letter-spacing: 2px;
+
+        /* THE BRAND LOGO IMAGE - pointing to cupii-logo.png */
+        .brand-logo {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(212,175,55,0.3); /* Subtle gold glow */
         }
+
         header p {
-            color: #d4af37;
-            font-size: 1.1em;
+            color: var(--gold);
+            font-size: 1.2em;
             margin-top: 10px;
+            font-family: 'Satisfy', cursive; /* Optional fancy subheader */
         }
+
         .container { 
-            max-width: 600px; 
+            max-width: 700px; 
             margin: 0 auto; 
-            padding: 20px; 
+            padding: 40px 20px; 
         }
+
+        h1, h2 {
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Advanced Product Cards */
         .product-card { 
             background: white; 
-            border-radius: 12px; 
-            padding: 25px; 
-            margin-bottom: 25px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
-            border-top: 4px solid #1a4731; 
+            border-radius: 16px; 
+            padding: 30px; 
+            margin-bottom: 30px; 
+            box-shadow: var(--shadow); 
+            border-top: 5px solid var(--dark-green); 
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .product-card h2 {
-            margin-top: 0;
-            color: #1a4731;
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
+
         .price { 
-            font-size: 1.5em; 
-            color: #1a4731; 
-            font-weight: bold; 
-            margin-top: 10px;
+            font-size: 1.8em; 
+            color: var(--dark-green); 
+            font-weight: 600; 
+            margin-top: 15px;
+            border-top: 2px solid #eee;
+            padding-top: 15px;
         }
+
+        /* Order Form Styling */
         .form-group { 
-            margin-bottom: 20px; 
+            margin-bottom: 25px; 
         }
+
         label { 
             display: block; 
-            margin-bottom: 8px; 
-            font-weight: bold; 
+            margin-bottom: 10px; 
+            font-weight: 600; 
             color: #444;
+            font-size: 0.95em;
         }
+
         input, select, textarea { 
             width: 100%; 
-            padding: 12px; 
-            border: 1px solid #ccc; 
-            border-radius: 6px; 
+            padding: 15px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
             box-sizing: border-box; 
             font-family: inherit;
+            font-size: 1em;
+            background-color: #fcfcfc;
         }
+
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #1a4731;
-            box-shadow: 0 0 5px rgba(26, 71, 49, 0.3);
+            border-color: var(--gold);
+            box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+            background-color: white;
         }
+
+        /* Enhanced Order Button */
         button { 
-            background-color: #1a4731; 
+            background-color: var(--dark-green); 
             color: white; 
             border: none; 
-            padding: 16px 20px; 
-            font-size: 1.2em; 
+            padding: 20px; 
+            font-size: 1.3em; 
             width: 100%; 
-            border-radius: 8px; 
+            border-radius: 10px; 
             cursor: pointer; 
-            font-weight: bold; 
+            font-weight: 600; 
             transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(26, 71, 49, 0.2);
         }
+
         button:hover { 
             background-color: #123323; 
+            box-shadow: 0 6px 15px rgba(26, 71, 49, 0.3);
         }
+
+        /* Hidden Success Message */
         #success-message { 
             display: none; 
             background-color: #d4edda; 
             color: #155724; 
-            padding: 30px; 
-            border-radius: 12px; 
+            padding: 40px; 
+            border-radius: 16px; 
             text-align: center; 
             margin-top: 20px; 
             border: 2px solid #c3e6cb; 
+            box-shadow: var(--shadow);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Cupii</h1>
+        <img src="cupii-logo.png" alt="Cupii Instant Coffee Bangladesh" class="brand-logo">
         <p>Your Daily Bloom. Curated Coffee Bundles.</p>
     </header>
 
     <div class="container">
         
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2>Premium Instant Coffee, Delivered.</h2>
+            <p style="max-width: 500px; margin: 0 auto 25px auto;">Stop settling for average mornings. Cupii brings you the world's favorite instant coffee brands in curated, affordable bundles, delivered straight to your door in Dhaka.</p>
+        </div>
+
         <div class="product-card">
             <h2>Standard 9-Piece Combo</h2>
             <p>Our signature discovery box featuring Tora Bika, KitKat, Old Town, and Nescafe imported favorites.</p>
@@ -123,8 +191,8 @@
         </div>
 
         <div class="product-card" id="checkout-section">
-            <h2>Place Your Order</h2>
-            <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">Fill out the details below. Pay only when you receive your package.</p>
+            <h2>Confirm Your Delivery</h2>
+            <p style="color: #666; font-size: 0.9em; margin-bottom: 25px;">Please provide your detailed delivery information below. All orders in Dhaka are shipped via local courier with Cash on Delivery (COD).</p>
             
             <form id="orderForm">
                 <input type="hidden" name="access_key" value="87a9b505-3799-47bf-aea2-e46a601184e2">
@@ -149,20 +217,20 @@
                 <div class="form-group">
                     <label for="combo">Select Your Combo *</label>
                     <select id="combo" name="combo" required>
-                        <option value="" disabled selected>Choose an option...</option>
+                        <option value="" disabled selected>Choose your coffee...</option>
                         <option value="Standard 9-Piece Combo (BDT 399)">Standard 9-Piece Combo - BDT 399</option>
                         <option value="Premium Combo (BDT 595)">Premium Combo - BDT 595</option>
                     </select>
                 </div>
                 
-                <button type="submit">Confirm Order (Cash on Delivery)</button>
+                <button type="submit">Place Order (Cash on Delivery)</button>
             </form>
         </div>
 
         <div id="success-message">
-            <h2 style="margin-top: 0;">🎉 Order Confirmed!</h2>
-            <p>Thank you for choosing Cupii. We have received your request.</p>
-            <p><strong>We will call you shortly</strong> on your provided phone number to verify your delivery details before dispatching your coffee.</p>
+            <h2 style="margin-top: 0; color: #155724;">🎉 Order Placed!</h2>
+            <p style="color: #155724;">Thank you for choosing Cupii. We have received your order request.</p>
+            <p style="color: #155724;"><strong>We will call you shortly</strong> on the phone number provided to verify your delivery details before dispatching your coffee.</p>
         </div>
 
     </div>
@@ -174,8 +242,7 @@
             const formData = new FormData(form);
             const button = form.querySelector('button');
             
-            // Change button text while sending
-            button.innerText = 'Processing Order...';
+            button.innerText = 'Verifying Order...';
             button.style.opacity = '0.7';
             button.disabled = true;
 
@@ -186,21 +253,20 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    // Hide form, show success message
                     document.getElementById('checkout-section').style.display = 'none';
                     document.getElementById('success-message').style.display = 'block';
-                    // Scroll to top of success message
+                    // Optional: Scroll back to header
                     window.scrollTo(0, 0);
                 } else {
-                    alert('Something went wrong. Please try again.');
-                    button.innerText = 'Confirm Order (Cash on Delivery)';
+                    alert('Something went wrong. Please check your data and try again.');
+                    button.innerText = 'Place Order (Cash on Delivery)';
                     button.style.opacity = '1';
                     button.disabled = false;
                 }
             })
             .catch(error => {
-                alert('Error submitting form. Please check your internet connection.');
-                button.innerText = 'Confirm Order (Cash on Delivery)';
+                alert('Connection error. Please try again.');
+                button.innerText = 'Place Order (Cash on Delivery)';
                 button.style.opacity = '1';
                 button.disabled = false;
             });
