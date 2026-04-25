@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupii | Instant Coffee Bangladesh</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #fbfbf8; /* Off-white */
+            color: #333; 
+            margin: 0; 
+            padding: 0; 
+        }
+        header { 
+            background-color: #1a4731; /* Dark Green */
+            color: white; 
+            padding: 30px 20px; 
+            text-align: center; 
+            border-bottom: 5px solid #d4af37; /* Gold */
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        header p {
+            color: #d4af37;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        .product-card { 
+            background: white; 
+            border-radius: 12px; 
+            padding: 25px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            border-top: 4px solid #1a4731; 
+        }
+        .product-card h2 {
+            margin-top: 0;
+            color: #1a4731;
+        }
+        .price { 
+            font-size: 1.5em; 
+            color: #1a4731; 
+            font-weight: bold; 
+            margin-top: 10px;
+        }
+        .form-group { 
+            margin-bottom: 20px; 
+        }
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: bold; 
+            color: #444;
+        }
+        input, select, textarea { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ccc; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #1a4731;
+            box-shadow: 0 0 5px rgba(26, 71, 49, 0.3);
+        }
+        button { 
+            background-color: #1a4731; 
+            color: white; 
+            border: none; 
+            padding: 16px 20px; 
+            font-size: 1.2em; 
+            width: 100%; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            transition: background-color 0.3s;
+        }
+        button:hover { 
+            background-color: #123323; 
+        }
+        #success-message { 
+            display: none; 
+            background-color: #d4edda; 
+            color: #155724; 
+            padding: 30px; 
+            border-radius: 12px; 
+            text-align: center; 
+            margin-top: 20px; 
+            border: 2px solid #c3e6cb; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cupii</h1>
+        <p>Your Daily Bloom. Curated Coffee Bundles.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="product-card">
+            <h2>Standard 9-Piece Combo</h2>
+            <p>Our signature discovery box featuring Tora Bika, KitKat, Old Town, and Nescafe imported favorites.</p>
+            <div class="price">BDT 399</div>
+        </div>
+
+        <div class="product-card">
+            <h2>Premium Combo Box</h2>
+            <p>The ultimate coffee lover's experience with extra selections for your daily cravings.</p>
+            <div class="price">BDT 595</div>
+        </div>
+
+        <div class="product-card" id="checkout-section">
+            <h2>Place Your Order</h2>
+            <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">Fill out the details below. Pay only when you receive your package.</p>
+            
+            <form id="orderForm">
+                <input type="hidden" name="access_key" value="87a9b505-3799-47bf-aea2-e46a601184e2">
+                <input type="hidden" name="subject" value="NEW CUPII ORDER!">
+                <input type="hidden" name="from_name" value="Cupii Store Checkout">
+                
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="e.g., Salman Rahman" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="017XXXXXXXX" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Detailed Delivery Address *</label>
+                    <textarea id="address" name="address" rows="3" placeholder="House number, road, area, Dhaka..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="combo">Select Your Combo *</label>
+                    <select id="combo" name="combo" required>
+                        <option value="" disabled selected>Choose an option...</option>
+                        <option value="Standard 9-Piece Combo (BDT 399)">Standard 9-Piece Combo - BDT 399</option>
+                        <option value="Premium Combo (BDT 595)">Premium Combo - BDT 595</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Confirm Order (Cash on Delivery)</button>
+            </form>
+        </div>
+
+        <div id="success-message">
+            <h2 style="margin-top: 0;">🎉 Order Confirmed!</h2>
+            <p>Thank you for choosing Cupii. We have received your request.</p>
+            <p><strong>We will call you shortly</strong> on your provided phone number to verify your delivery details before dispatching your coffee.</p>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            const form = e.target;
+            const formData = new FormData(form);
+            const button = form.querySelector('button');
+            
+            // Change button text while sending
+            button.innerText = 'Processing Order...';
+            button.style.opacity = '0.7';
+            button.disabled = true;
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Hide form, show success message
+                    document.getElementById('checkout-section').style.display = 'none';
+                    document.getElementById('success-message').style.display = 'block';
+                    // Scroll to top of success message
+                    window.scrollTo(0, 0);
+                } else {
+                    alert('Something went wrong. Please try again.');
+                    button.innerText = 'Confirm Order (Cash on Delivery)';
+                    button.style.opacity = '1';
+                    button.disabled = false;
+                }
+            })
+            .catch(error => {
+                alert('Error submitting form. Please check your internet connection.');
+                button.innerText = 'Confirm Order (Cash on Delivery)';
+                button.style.opacity = '1';
+                button.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
