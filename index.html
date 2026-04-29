@@ -1,338 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cupii | Instant Coffee Bangladesh</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@700;900&family=Satisfy&display=swap" rel="stylesheet">
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
-</head><!-- FLOATING CART ICON (add before closing </body> tag) -->
-<div class="floating-cart-btn" id="floatingCartBtn" aria-label="Shopping Cart">
-  <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <circle cx="9" cy="21" r="1"></circle>
-    <circle cx="20" cy="21" r="1"></circle>
-    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-  </svg>
-  <span class="cart-badge" id="cartBadge">0</span>
-</div>
-
-<!-- CART SLIDE-OUT PANEL (add before closing </body> tag) -->
-<div class="cart-overlay" id="cartOverlay"></div>
-<div class="cart-panel" id="cartPanel" role="dialog" aria-labelledby="cartPanelTitle" aria-modal="true">
-  <div class="cart-header">
-    <h2 id="cartPanelTitle">🛒 Your Cart</h2>
-    <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">✕</button>
-  </div>
-
-  <div class="cart-empty-state" id="cartEmptyState">
-    <div class="empty-emoji">🛍️</div>
-    <p>Your cart is empty</p>
-    <p class="empty-subtext">Add some products to get started!</p>
-  </div>
-
-  <div class="cart-items-container" id="cartItemsContainer">
-    <!-- Cart items will be rendered here -->
-  </div>
-
-  <div class="cart-footer">
-    <div class="cart-summary">
-      <div class="summary-row">
-        <span>Subtotal:</span>
-        <span id="cartSubtotal">BDT 0</span>
-      </div>
-      <div class="summary-row">
-        <span>Delivery Fee:</span>
-        <span>BDT 60</span>
-      </div>
-      <div class="summary-row summary-total">
-        <span>Total:</span>
-        <span id="cartTotal">BDT 60</span>
-      </div>
-    </div>
-    <button class="cart-checkout-btn" id="cartCheckoutBtn">Proceed to Checkout →</button>
-  </div>
-</div>
-
-<!-- HIDDEN TEXTAREA FOR CART ITEMS (inject into order form) -->
-<textarea id="cartItemsText" name="cart_items" style="display:none;"></textarea>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupii | Premium Instant Coffee Bangladesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="cupii-logo.png" alt="Cupii Instant Coffee" class="brand-logo" onerror="this.style.display='none'; document.querySelector('header h1').style.display='block';">
-    <h1 style="display:none;color:white;">☕ Cupii</h1>
+<!-- ========== HEADER ========== -->
+<header>
+    <img src="cupii-logo.png" alt="Cupii" class="brand-logo"
+         onerror="this.style.display='none';document.getElementById('header-fallback').style.display='block'">
+    <div id="header-fallback" style="display:none">
+        <div class="fallback-logo">☕</div>
+        <div class="fallback-name">Cupii</div>
+    </div>
     <p class="tagline">Your Daily Bloom. Curated Coffee Bundles.</p>
-    <div class="header-badge">🇧🇩 Delivering across Dhaka · COD Available</div>
-  </header>
+    <div class="header-badge">🇧🇩 Delivering across Dhaka · Cash on Delivery</div>
+</header>
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-item"><span class="icon">🚚</span> Free Delivery in Dhaka</div>
-    <div class="trust-item"><span class="icon">💳</span> Cash on Delivery</div>
-    <div class="trust-item"><span class="icon">🌿</span> 100% Imported</div>
-    <div class="trust-item"><span class="icon">⭐</span> 500+ Happy Customers</div>
-  </div>
+<!-- ========== TRUST BAR ========== -->
+<div class="trust-bar">
+    <div class="trust-item"><span>💳</span>Cash on Delivery</div>
+    <div class="trust-item"><span>🌿</span>100% Imported</div>
+    <div class="trust-item"><span>⭐</span>500+ Happy Customers</div>
+    <div class="trust-item"><span>🚚</span>Same-day Dispatch</div>
+</div>
 
-  <!-- MAIN -->
-  <main class="container">
-    <div class="hero">
-      <div class="section-title">Premium Instant Coffee, Delivered.</div>
-      <p class="hero-sub">Stop settling for average mornings. Cupii brings you the world's favourite instant coffee brands in curated, affordable bundles — delivered to your door in Dhaka.</p>
+<!-- ========== FLOATING CART BADGE ========== -->
+<div class="cart-badge" id="cartBadge" style="display:none">
+    <span class="cb-icon">🛒</span>
+    <span id="cbText">0 items</span>
+    <button onclick="document.getElementById('checkout-section').scrollIntoView({behavior:'smooth'})">View Order</button>
+</div>
+
+<!-- ========== MAIN CONTAINER ========== -->
+<main class="container">
+
+    <!-- Hero -->
+    <div class="hero-text">
+        <h1 class="hero-title">Premium Instant Coffee,<br><em>Delivered.</em></h1>
+        <p class="hero-sub">Stop settling for average mornings. Cupii brings you the world's favourite instant coffee brands in curated, affordable bundles — straight to your door in Dhaka.</p>
     </div>
 
-    <!-- TRENDING CAROUSEL -->
-    <section class="trending-section">
-      <div class="trending-header">
-        <div>
-          <div class="trending-title"><span class="fire-emoji">🔥</span> Trending Combos</div>
-          <div class="trending-subtitle">Most loved bundles this week</div>
+    <!-- ========== INDIVIDUAL COFFEES CAROUSEL ========== -->
+    <section class="section trending-section">
+        <div class="section-header">
+            <div class="live-dot"></div>
+            <h2 class="section-title">Individual Coffees</h2>
         </div>
-        <div class="carousel-nav">
-          <button class="carousel-btn" id="prevBtn" aria-label="Previous">&larr;</button>
-          <button class="carousel-btn" id="nextBtn" aria-label="Next">&rarr;</button>
+        <p class="section-sub">Mix &amp; match your own selection · <strong>BDT 100 each</strong></p>
+
+        <div class="carousel-wrap" id="carousel">
+            <div class="carousel-track">
+
+                <!-- Card 1 -->
+                <div class="c-card" data-key="tora-bika">
+                    <div class="c-tag">🔥 Hot</div>
+                    <div class="c-img-box">
+                        <img src="tora-bika.jpg" alt="Tora Bika"
+                             onerror="this.closest('.c-img-box').classList.add('no-img')">
+                        <div class="c-img-fb">☕</div>
+                    </div>
+                    <div class="c-body">
+                        <div class="c-name">Tora Bika Classic</div>
+                        <div class="c-desc">Rich &amp; creamy Indonesian cappuccino instant sachet.</div>
+                        <div class="c-footer">
+                            <span class="c-price">BDT 100</span>
+                            <button class="btn-add-sm" data-key="tora-bika">+ Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="c-card" data-key="kitkat">
+                    <div class="c-tag">⭐ Top</div>
+                    <div class="c-img-box">
+                        <img src="kitkat-coffee.jpg" alt="KitKat Coffee"
+                             onerror="this.closest('.c-img-box').classList.add('no-img')">
+                        <div class="c-img-fb">🍫</div>
+                    </div>
+                    <div class="c-body">
+                        <div class="c-name">KitKat Coffee Duo</div>
+                        <div class="c-desc">Japanese KitKat × premium mocha blend.</div>
+                        <div class="c-footer">
+                            <span class="c-price">BDT 100</span>
+                            <button class="btn-add-sm" data-key="kitkat">+ Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="c-card" data-key="old-town">
+                    <div class="c-tag">🆕 New</div>
+                    <div class="c-img-box">
+                        <img src="old-town.jpg" alt="Old Town White Coffee"
+                             onerror="this.closest('.c-img-box').classList.add('no-img')">
+                        <div class="c-img-fb">🌸</div>
+                    </div>
+                    <div class="c-body">
+                        <div class="c-name">Old Town White Café</div>
+                        <div class="c-desc">Malaysia's iconic 3-in-1 white coffee. Smooth &amp; indulgent.</div>
+                        <div class="c-footer">
+                            <span class="c-price">BDT 100</span>
+                            <button class="btn-add-sm" data-key="old-town">+ Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="c-card" data-key="nescafe">
+                    <div class="c-tag">💛 Fav</div>
+                    <div class="c-img-box">
+                        <img src="nescafe-gold.jpg" alt="Nescafé Gold"
+                             onerror="this.closest('.c-img-box').classList.add('no-img')">
+                        <div class="c-img-fb">🏔️</div>
+                    </div>
+                    <div class="c-body">
+                        <div class="c-name">Nescafé Gold Edition</div>
+                        <div class="c-desc">World-famous gold blend, rich &amp; silky finish.</div>
+                        <div class="c-footer">
+                            <span class="c-price">BDT 100</span>
+                            <button class="btn-add-sm" data-key="nescafe">+ Add</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-
-      <div class="carousel-container">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="trending-card" data-product="trend-1">
-            <div class="trending-img-wrap"><span class="trending-badge">Hot</span>
-              <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&h=400&fit=crop" alt="Coffee Lover's Pack">
-            </div>
-            <div class="trending-info">
-              <div class="trending-name">Coffee Lover's Premium Pack</div>
-              <div class="trending-price"><span class="taka">BDT</span> 1299</div>
-            </div>
-          </div>
-
-          <div class="trending-card" data-product="trend-2">
-            <div class="trending-img-wrap"><span class="trending-badge">Best</span>
-              <img src="https://images.unsplash.com/photo-1606914501449-5a9664d1d151?w=600&h=400&fit=crop" alt="Snack Attack Combo">
-            </div>
-            <div class="trending-info">
-              <div class="trending-name">Snack Attack Combo Box</div>
-              <div class="trending-price"><span class="taka">BDT</span> 899</div>
-            </div>
-          </div>
-
-          <div class="trending-card" data-product="trend-3">
-            <div class="trending-img-wrap"><span class="trending-badge">New</span>
-              <img src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?w=600&h=400&fit=crop" alt="Tea Time Special">
-            </div>
-            <div class="trending-info">
-              <div class="trending-name">Tea Time Special Collection</div>
-              <div class="trending-price"><span class="taka">BDT</span> 649</div>
-            </div>
-          </div>
-
-          <div class="trending-card" data-product="trend-4">
-            <div class="trending-img-wrap"><span class="trending-badge">Sale</span>
-              <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=600&h=400&fit=crop" alt="Noodle Ramen Set">
-            </div>
-            <div class="trending-info">
-              <div class="trending-name">Ramen & Noodles Mega Set</div>
-              <div class="trending-price"><span class="taka">BDT</span> 1499</div>
-            </div>
-          </div>
+        <div class="c-dots" id="cDots">
+            <span class="c-dot active" data-i="0"></span>
+            <span class="c-dot" data-i="1"></span>
+            <span class="c-dot" data-i="2"></span>
+            <span class="c-dot" data-i="3"></span>
         </div>
-      </div>
     </section>
 
-    <!-- PRODUCTS GRID -->
-    <section class="products-section">
-      <div class="section-header">
-        <h2>Special Offers</h2>
-        <p>Grab these deals before they're gone!</p>
-      </div>
+    <!-- ========== BUNDLE CARDS ========== -->
+    <section class="section bundles-section">
+        <h2 class="section-title">Coffee Bundles</h2>
+        <p class="section-sub">Curated combos for every kind of coffee lover</p>
 
-      <div class="products-grid">
-        <!-- Product A (15% off) -->
-        <article class="product-card" data-id="prod-399">
-          <div class="product-image-wrap">
-            <span class="discount-badge">-15%</span>
-            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&h=600&fit=crop" alt="Premium Coffee Combo">
-            <div class="quick-view-overlay">
-              <button class="quick-view-btn" data-view="prod-399">Quick View</button>
+        <!-- Bundle 1: Standard -->
+        <div class="bundle-card">
+            <div class="bundle-img-area">
+                <img src="standard-combo.jpg" alt="Standard 9-Piece Combo"
+                     onerror="this.closest('.bundle-img-area').classList.add('no-img')">
+                <div class="bundle-img-fb">🎁</div>
+                <div class="badge badge-sale">🔖 15% OFF</div>
             </div>
-          </div>
-          <div class="product-details">
-            <a href="#" class="product-name">Premium Coffee Combo - 3pcs Imported Selection</a>
-            <div class="price-row">
-              <div class="current-price">BDT 399</div>
-              <div class="original-price">BDT 470</div>
-              <div class="savings-tag">Save BDT 71</div>
+            <div class="bundle-body">
+                <h3>Standard 9-Piece Combo</h3>
+                <p>Our signature discovery box featuring Tora Bika, KitKat, Old Town &amp; Nescafé — all your imported favourites in one curated bundle.</p>
+                <div class="bundle-chips">
+                    <span>9 Sachets</span><span>4 Brands</span><span>Best Seller</span>
+                </div>
+                <div class="price-row">
+                    <span class="p-was">BDT 470</span>
+                    <span class="p-now">BDT 399</span>
+                    <span class="p-save">Save BDT 71</span>
+                </div>
+                <div class="bundle-actions">
+                    <button class="btn-ghost" data-view="standard">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        What's inside?
+                    </button>
+                    <button class="btn-add-lg" data-key="standard">Add to Order</button>
+                </div>
             </div>
-            <div class="product-actions">
-              <button class="btn-add-cart" data-product="prod-399">Add to Cart</button>
-              <button class="btn-buy-now" data-product="prod-399">Buy Now</button>
-            </div>
-          </div>
-        </article>
+        </div>
 
-        <!-- Product B (20% off) -->
-        <article class="product-card" data-id="prod-599">
-          <div class="product-image-wrap">
-            <span class="discount-badge">-20%</span>
-            <img src="https://images.unsplash.com/photo-1606914501449-5a9664d1d151?w=800&h=600&fit=crop" alt="Snack Bundle">
-            <div class="quick-view-overlay">
-              <button class="quick-view-btn" data-view="prod-599">Quick View</button>
+        <!-- Bundle 2: Premium -->
+        <div class="bundle-card">
+            <div class="bundle-img-area">
+                <img src="premium-combo.jpg" alt="Premium Combo"
+                     onerror="this.closest('.bundle-img-area').classList.add('no-img')">
+                <div class="bundle-img-fb">🌟</div>
             </div>
-          </div>
-          <div class="product-details">
-            <a href="#" class="product-name">Family Snack Bundle - Imported Biscuits & Chips</a>
-            <div class="price-row">
-              <div class="current-price">BDT 599</div>
-              <div class="original-price">BDT 749</div>
-              <div class="savings-tag">Save BDT 150</div>
+            <div class="bundle-body">
+                <h3>Premium Combo Box</h3>
+                <p>The ultimate coffee lover's experience. Extra selections, richer variety — curated for those who refuse to compromise on their morning ritual.</p>
+                <div class="bundle-chips">
+                    <span>15 Sachets</span><span>5 Brands</span><span>Best Value</span>
+                </div>
+                <div class="price-row">
+                    <span class="p-now">BDT 595</span>
+                </div>
+                <div class="bundle-actions">
+                    <button class="btn-ghost" data-view="premium">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        What's inside?
+                    </button>
+                    <button class="btn-add-lg" data-key="premium">Add to Order</button>
+                </div>
             </div>
-            <div class="product-actions">
-              <button class="btn-add-cart" data-product="prod-599">Add to Cart</button>
-              <button class="btn-buy-now" data-product="prod-599">Buy Now</button>
-            </div>
-          </div>
-        </article>
+        </div>
 
-        <!-- Product C (10% off) -->
-        <article class="product-card" data-id="prod-349">
-          <div class="product-image-wrap">
-            <span class="discount-badge">-10%</span>
-            <img src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?w=800&h=600&fit=crop" alt="Tea Collection">
-            <div class="quick-view-overlay">
-              <button class="quick-view-btn" data-view="prod-349">Quick View</button>
+        <!-- Bundle 3: Mega (featured) -->
+        <div class="bundle-card bundle-featured">
+            <div class="bundle-img-area">
+                <img src="mega-combo.jpg" alt="Mega Combo"
+                     onerror="this.closest('.bundle-img-area').classList.add('no-img')">
+                <div class="bundle-img-fb">🏆</div>
+                <div class="badge badge-star">⭐ Most Popular</div>
             </div>
-          </div>
-          <div class="product-details">
-            <a href="#" class="product-name">Premium Green Tea Collection - 100 Bags</a>
-            <div class="price-row">
-              <div class="current-price">BDT 349</div>
-              <div class="original-price">BDT 389</div>
-              <div class="savings-tag">Save BDT 40</div>
+            <div class="bundle-body">
+                <h3>Mega Combo Box</h3>
+                <p>The grandest coffee experience we offer. A month-long supply for the serious coffee enthusiast — or the most thoughtful gift you can give.</p>
+                <div class="bundle-chips">
+                    <span>25 Sachets</span><span>6+ Brands</span><span>Gift-Ready</span>
+                </div>
+                <div class="price-row">
+                    <span class="p-now p-gold">BDT 1,095</span>
+                </div>
+                <div class="bundle-actions">
+                    <button class="btn-ghost btn-ghost-gold" data-view="mega">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        What's inside?
+                    </button>
+                    <button class="btn-add-lg btn-add-gold" data-key="mega">Add to Order</button>
+                </div>
             </div>
-            <div class="product-actions">
-              <button class="btn-add-cart" data-product="prod-349">Add to Cart</button>
-              <button class="btn-buy-now" data-product="prod-349">Buy Now</button>
-            </div>
-          </div>
-        </article>
+        </div>
 
-        <!-- Product D (25% off) -->
-        <article class="product-card" data-id="prod-799">
-          <div class="product-image-wrap">
-            <span class="discount-badge">-25%</span>
-            <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=800&h=600&fit=crop" alt="Chocolate Box">
-            <div class="quick-view-overlay">
-              <button class="quick-view-btn" data-view="prod-799">Quick View</button>
-            </div>
-          </div>
-          <div class="product-details">
-            <a href="#" class="product-name">Imported Chocolate Gift Box - 12pcs Assorted</a>
-            <div class="price-row">
-              <div class="current-price">BDT 799</div>
-              <div class="original-price">BDT 1065</div>
-              <div class="savings-tag">Save BDT 266</div>
-            </div>
-            <div class="product-actions">
-              <button class="btn-add-cart" data-product="prod-799">Add to Cart</button>
-              <button class="btn-buy-now" data-product="prod-799">Buy Now</button>
-            </div>
-          </div>
-        </article>
-      </div>
     </section>
 
-    <!-- ORIGINAL ORDER FORM (kept and integrated) -->
-    <section class="order-card" id="checkout-section">
-      <h2>☕ Confirm Your Delivery</h2>
-      <p class="order-sub">Fill in your details below. We'll call to confirm before dispatching. All Dhaka orders ship via local courier with COD.</p>
+    <!-- ========== ORDER & CART SECTION ========== -->
+    <section class="section order-section" id="checkout-section">
 
-      <form id="orderForm">
-        <input type="hidden" name="access_key" value="87a9b505-3799-47bf-aea2-e46a601184e2">
-        <input type="hidden" name="subject" value="NEW CUPII ORDER!">
-        <input type="hidden" name="from_name" value="Cupii Store Checkout">
-
-        <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" placeholder="e.g. Salman Rahman" required>
+        <div class="order-top">
+            <h2 class="order-title">🛒 Your Order</h2>
+            <p class="order-sub">Review items, choose shipping, then fill in delivery details.</p>
         </div>
 
-        <div class="form-group">
-          <label for="phone">Phone Number *</label>
-          <input type="tel" id="phone" name="phone" placeholder="017XXXXXXXX" required>
+        <!-- Live Cart -->
+        <div class="cart-box" id="cartBox">
+            <!-- Empty state -->
+            <div class="cart-empty" id="cartEmpty">
+                <div class="ce-icon">🛒</div>
+                <div class="ce-text">Your order is empty</div>
+                <div class="ce-hint">Add a bundle or individual coffees above to get started!</div>
+            </div>
+            <!-- Items list -->
+            <div id="cartItems"></div>
+            <!-- Summary -->
+            <div class="cart-summary" id="cartSummary" style="display:none">
+                <div class="cs-row">
+                    <span>Subtotal</span>
+                    <span>BDT <strong id="yoSubtotal">0</strong></span>
+                </div>
+                <div class="cs-row cs-ship">
+                    <span>Delivery</span>
+                    <div class="ship-opts">
+                        <label>
+                            <input type="radio" name="shipment" value="60" checked>
+                            Inside Dhaka &nbsp;<b>BDT 60</b>
+                        </label>
+                        <label>
+                            <input type="radio" name="shipment" value="120">
+                            Outside Dhaka &nbsp;<b>BDT 120</b>
+                        </label>
+                    </div>
+                </div>
+                <div class="cs-row cs-total">
+                    <span>Total</span>
+                    <span class="total-price">BDT <strong id="yoTotal">0</strong></span>
+                </div>
+            </div>
         </div>
 
-        <div class="form-group">
-          <label for="address">Delivery Address *</label>
-          <textarea id="address" name="address" rows="3" placeholder="House, Road, Area, Dhaka..." required></textarea>
-        </div>
+        <!-- Delivery Form -->
+        <form id="orderForm" novalidate>
+            <!-- Web3Forms hidden fields -->
+            <input type="hidden" name="access_key" value="87a9b505-3799-47bf-aea2-e46a601184e2">
+            <input type="hidden" name="subject" value="🆕 NEW CUPII ORDER!">
+            <input type="hidden" name="from_name" value="Cupii Store">
+            <!-- Order data hidden fields -->
+            <input type="hidden" name="order_items"   id="fOrderItems"   value="">
+            <input type="hidden" name="subtotal"       id="fSubtotal"     value="0">
+            <input type="hidden" name="shipping_fee"   id="fShipping"     value="60">
+            <input type="hidden" name="order_total"    id="fTotal"        value="0">
 
-        <div class="form-group">
-          <label for="combo">Select Combo *</label>
-          <select id="combo" name="combo" required>
-            <option value="" disabled selected>Choose your coffee...</option>
-            <option value="Standard 9-Piece Combo (BDT 399)">☕ Standard 9-Piece Combo — BDT 399 (Sale!)</option>
-            <option value="Premium Combo (BDT 595)">🌟 Premium Combo — BDT 595</option>
-          </select>
-        </div>
+            <div class="form-divider"><span>Delivery Details</span></div>
 
-        <button type="submit" class="submit-btn">🚚 Place Order — Cash on Delivery</button>
-      </form>
+            <div class="form-row-2">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. Salman Rahman" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="017XXXXXXXX" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Delivery Address *</label>
+                <textarea id="address" name="address" rows="3"
+                          placeholder="House no., road, area, Dhaka..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Special Instructions <span class="opt">(optional)</span></label>
+                <input type="text" id="notes" name="notes"
+                       placeholder="Any notes or preferences for your order?">
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+                🚚 Place Order — Cash on Delivery
+            </button>
+        </form>
     </section>
 
-    <div id="success-message" class="success-message" aria-live="polite">
-      <div class="success-emoji">🎉</div>
-      <h2>Order Placed!</h2>
-      <p>Thank you for choosing Cupii. We've received your order.</p>
-      <p><strong>We'll call you shortly</strong> on the number provided to confirm delivery before dispatch.</p>
+    <!-- Success message -->
+    <div class="success-card" id="successCard">
+        <div class="sc-icon">🎉</div>
+        <h2>Order Placed!</h2>
+        <p>Thank you for choosing Cupii. We've received your order.</p>
+        <p><strong>We'll call you shortly</strong> on the number provided to confirm delivery before dispatch.</p>
     </div>
-  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <span>Cupii</span> · Instant Coffee Bangladesh · All orders via COD in Dhaka<br>
-    <span class="muted">© 2025 Cupii. Made with ☕ &amp; love.</span>
-  </footer>
+</main>
 
-  <!-- QUICK VIEW MODAL -->
-  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
-    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <span class="modal-emoji" id="modalEmoji">☕</span>
-      <h3 id="modalTitle">Product Title</h3>
-      <p id="modalDesc" class="modal-desc"></p>
-      <ul class="modal-items" id="modalItems"></ul>
-      <div class="modal-actions">
-        <button class="btn-add-cart" id="modalAddCart">Add to Cart</button>
-        <button class="btn-buy-now" id="modalBuyNow">Buy Now</button>
-        <button class="modal-cta" id="modalOrder" onclick="scrollToOrder();">Order This Combo →</button>
-      </div>
+<!-- ========== FOOTER ========== -->
+<footer>
+    <div class="footer-logo">Cupii</div>
+    <div class="footer-info">Instant Coffee Bangladesh &nbsp;·&nbsp; All orders via COD in Dhaka</div>
+    <div class="footer-copy">© 2025 Cupii. Made with ☕ &amp; love.</div>
+</footer>
+
+<!-- ========== QUICK VIEW MODAL ========== -->
+<div class="modal-bg" id="modalBg" onclick="closeModalOutside(event)">
+    <div class="modal" id="modal">
+        <button class="modal-x" onclick="closeModal()" aria-label="Close">✕</button>
+        <div class="modal-emoji" id="mEmoji">☕</div>
+        <h3 id="mTitle"></h3>
+        <p id="mDesc"></p>
+        <ul id="mItems" class="modal-list"></ul>
+        <div class="modal-price" id="mPriceRow">
+            <span id="mWas" class="modal-was"></span>
+            <span id="mNow" class="modal-now"></span>
+        </div>
+        <button class="btn-modal-add" onclick="addFromModal()">Add to Order →</button>
     </div>
-  </div>
+</div>
 
-  <!-- PROTECT MODAL + OVERLAY -->
-  <div class="protect-overlay" id="protectOverlay"></div>
-  <div class="protect-modal" id="protectModal" role="alertdialog" aria-hidden="true">
-    <div class="protect-icon">🔒</div>
-    <h3>Content is Protected</h3>
-    <p>This website's content is protected by copyright.</p>
-  </div>
-
-  <!-- WHATSAPP WIDGET -->
-  <div class="wa-widget" id="waWidget">
-    <div class="wa-tooltip">Need Help? Chat with us 💬</div>
-    <a class="wa-button" href="https://wa.me/8801712345678?text=Hi%20Cupii!%20I'd%20like%20to%20order%20coffee%20😊" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-      <span class="wa-ping"></span>
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-..."/></svg>
+<!-- ========== WHATSAPP WIDGET ========== -->
+<div class="wa-wrap">
+    <div class="wa-tip">💬 Need Help? Chat with us!</div>
+    <!-- Replace 8801712345678 with your WhatsApp number -->
+    <a class="wa-btn"
+       href="https://wa.me/8801712345678?text=Hi%20Cupii!%20I'd%20like%20to%20order%20coffee%20☕"
+       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.002 2C8.274 2 2 8.274 2 16.002c0 2.47.668 4.78 1.832 6.763L2 30l7.434-1.8A13.94 13.94 0 0016.002 30C23.728 30 30 23.727 30 16.002 30 8.274 23.728 2 16.002 2zm0 25.5a11.46 11.46 0 01-5.832-1.59l-.418-.248-4.41 1.068 1.1-4.3-.272-.44A11.45 11.45 0 014.5 16.002c0-6.352 5.15-11.502 11.502-11.502S27.5 9.65 27.5 16.002 22.354 27.5 16.002 27.5zm6.305-8.61c-.346-.173-2.047-1.01-2.364-1.124-.318-.116-.55-.173-.78.173-.232.346-.896 1.124-1.097 1.356-.202.23-.404.26-.75.087-.346-.174-1.46-.538-2.782-1.716-1.03-.917-1.724-2.048-1.926-2.394-.202-.346-.022-.533.152-.705.156-.155.346-.404.52-.606.172-.202.23-.346.345-.578.116-.23.058-.433-.029-.606-.087-.173-.78-1.879-1.07-2.572-.28-.675-.567-.583-.78-.594l-.664-.011c-.23 0-.606.087-.923.433-.318.346-1.213 1.185-1.213 2.89 0 1.704 1.242 3.352 1.415 3.582.172.23 2.447 3.735 5.93 5.237.829.358 1.476.572 1.981.733.832.266 1.59.228 2.19.138.668-.1 2.047-.837 2.337-1.645.289-.808.289-1.502.202-1.646-.086-.144-.317-.23-.663-.404z"/>
+        </svg>
     </a>
-  </div>
+</div>
 
-  <!-- TOAST CONTAINER -->
-  <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
-
-  <!-- External JS -->
-  <script src="scripts.js" defer></script>
+<script src="scripts.js" defer></script>
 </body>
 </html>
