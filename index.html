@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&family=Satisfy&display=swap" rel="stylesheet">
     
+    <!-- Google Analytics Tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EDNFQXQEG"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-4EDNFQXQEG');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4EDNFQXQEG');
     </script>
     
     <style>
@@ -266,12 +266,13 @@
             width: 165px;
             background: white;
             border-radius: var(--radius);
+            /* padding: 14px; */ /* Removed from .product-item to place in .pi-content */
             box-shadow: var(--shadow-soft);
             border: 1.5px solid #f0f0f0;
             scroll-snap-align: start;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
-            overflow: hidden; 
+            overflow: hidden; /* Important for background image */
         }
 
         .product-item:hover {
@@ -285,7 +286,7 @@
             position: absolute;
             top: 10px;
             left: 10px;
-            background: rgba(26, 71, 49, 0.9);
+            background: rgba(26, 71, 49, 0.9); /* More prominent tag on image */
             color: white;
             font-size: 0.58em;
             font-weight: 700;
@@ -300,15 +301,17 @@
             display: block;
         }
 
+        /* New background image layer */
         .pi-image-bg {
             position: absolute;
             inset: 0;
             background-size: cover;
             background-position: center;
-            opacity: 0.3; 
+            opacity: 0.3; /* Adjusted for better content readability */
             z-index: 1;
         }
 
+        /* Content container to float over the image */
         .pi-content {
             position: relative;
             z-index: 2;
@@ -324,7 +327,7 @@
             color: var(--dark-green);
             line-height: 1.3;
             margin-bottom: 2px;
-            margin-top: auto; 
+            margin-top: auto; /* Push down to make room for tag/top content */
         }
 
         .pi-desc {
@@ -942,7 +945,6 @@
         .footer-copy {
             font-size: 0.68em;
             color: rgba(255,255,255,0.25);
-            margin-bottom: 15px;
         }
 
         /* ============ WHATSAPP WIDGET ============ */
@@ -1047,6 +1049,7 @@
 </head>
 <body>
 
+<!-- ========== HEADER ========== -->
 <header>
     <div class="logo-container">
         <img src="cupii-logo.png" alt="Cupii" class="brand-logo"
@@ -1057,6 +1060,7 @@
     <div class="header-badge">🇧🇩 Delivering across Dhaka · Cash on Delivery</div>
 </header>
 
+<!-- ========== TRUST BAR ========== -->
 <div class="trust-bar">
     <div class="trust-item">💳 Cash on Delivery</div>
     <div class="trust-item">🌿 100% Imported</div>
@@ -1064,18 +1068,22 @@
     <div class="trust-item">🚚 Same-Day Dispatch</div>
 </div>
 
+<!-- ========== CART STICKY ========== -->
 <div class="cart-sticky" id="cartSticky">
     <span>🛒 <strong id="cartCount">0</strong> items | <strong id="cartPrice">BDT 0</strong></span>
     <button onclick="document.getElementById('checkout-section').scrollIntoView({behavior:'smooth'})">View Order</button>
 </div>
 
+<!-- ========== MAIN ========== -->
 <main class="container">
 
+    <!-- Hero -->
     <div class="hero">
         <h2>Premium Instant Coffee,<br><em style="color:var(--gold)">Delivered.</em></h2>
         <p>Stop settling for average mornings. Cupii brings you the world's favourite instant coffee brands in curated, affordable bundles — straight to your door in Dhaka.</p>
     </div>
 
+    <!-- ========== INDIVIDUAL COFFEES ========== -->
     <section class="section">
         <div class="section-head">
             <div class="live-dot"></div>
@@ -1088,16 +1096,18 @@
         </div>
     </section>
 
+    <!-- ========== BUNDLES ========== -->
     <section class="section">
         <h3 style="margin-bottom:4px">Coffee Bundles</h3>
         <p class="section-sub">Curated combos for every kind of coffee lover</p>
 
+        <!-- Student Combo -->
         <div class="bundle-card">
             <span class="bundle-badge">🎓 12.5% OFF</span>
             <h3>Student Combo</h3>
             <p>Perfect for students on a budget. Quick energy boosts for late-night study sessions.</p>
             <div class="bundle-items">
-                <strong>Bundle Includes:</strong>
+                strong>Bundle Includes:</strong>
                 2 Torabika Cappuccino · 1 KitKat Hot Chocolate · 1 Chocolaty Mocha · 1 OldTown Hazelnut
             </div>
             <div class="price-section">
@@ -1114,11 +1124,12 @@
             </div>
         </div>
 
+        <!-- Premium Combo -->
         <div class="bundle-card">
             <h3>Premium Combo</h3>
             <p>The ultimate coffee lover's experience. Extra selections, richer variety — for those who refuse to compromise.</p>
             <div class="bundle-items">
-                <strong>Bundle Includes:</strong>
+                strong>Bundle Includes:</strong>
                 5 Torabika Cappuccino · 1 KitKat Hot Chocolate · 1 Caramel Latte · 1 Chocolaty Mocha · 1 OldTown Hazelnut
             </div>
             <div class="price-section">
@@ -1133,12 +1144,13 @@
             </div>
         </div>
 
+        <!-- Mega Combo -->
         <div class="bundle-card featured">
             <span class="bundle-badge feature">🏆 MOST POPULAR</span>
             <h3>Mega Combo Box</h3>
             <p>The grandest coffee experience. A month-long supply for the serious enthusiast — or the most thoughtful gift.</p>
             <div class="bundle-items">
-                <strong>Bundle Includes:</strong>
+                strong>Bundle Includes:</strong>
                 5 Torabika Cappuccino · 2 KitKat Hot Chocolate · 2 Caramel Latte · 2 Chocolaty Mocha · 2 OldTown Hazelnut · 2 OldTown White Coffee Surprise
             </div>
             <div class="price-section">
@@ -1154,10 +1166,12 @@
         </div>
     </section>
 
+    <!-- ========== ORDER SECTION ========== -->
     <section class="order-section" id="checkout-section">
         <h2 class="order-title">🛒 Your Order</h2>
         <p class="order-sub">Review items, choose delivery, then fill in your details.</p>
 
+        <!-- Cart -->
         <div class="cart-display">
             <div class="cart-empty" id="cartEmpty">
                 <div class="ce-icon">🛒</div>
@@ -1190,6 +1204,7 @@
             </div>
         </div>
 
+        <!-- Form -->
         <form id="orderForm" onsubmit="submitOrder(event)">
             <input type="hidden" name="access_key" value="87a9b505-3799-47bf-aea2-e46a601184e2">
             <input type="hidden" name="subject" value="🆕 NEW CUPII ORDER!">
@@ -1226,6 +1241,7 @@
         </form>
     </section>
 
+    <!-- Success -->
     <div class="success-card" id="successCard">
         <div class="sc-icon">🎉</div>
         <h2>Order Placed!</h2>
@@ -1235,14 +1251,14 @@
 
 </main>
 
+<!-- ========== FOOTER ========== -->
 <footer>
     <div class="footer-logo">Cupii</div>
     <div class="footer-info">Instant Coffee Bangladesh · All orders via COD in Dhaka</div>
     <div class="footer-copy">© 2025 Cupii. Made with ☕ & love.</div>
-    
-    <img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=cupiicoffee.store" alt="Hits">
 </footer>
 
+<!-- ========== MODAL ========== -->
 <div class="modal-bg" id="modalBg" onclick="closeModal(event)">
     <div class="modal" id="modal">
         <button class="modal-close" onclick="closeModal()">✕</button>
@@ -1254,6 +1270,7 @@
     </div>
 </div>
 
+<!-- ========== WHATSAPP WIDGET ========== -->
 <div class="wa-wrap">
     <div class="wa-tip">💬 Need Help? Chat with us!</div>
     <a class="wa-btn" href="https://wa.me/8801712345678?text=Hi%20Cupii!%20I'd%20like%20to%20order%20coffee%20☕" 
@@ -1290,12 +1307,12 @@ const PRODUCTS = {
         items: ['5 Torabika Cappuccino', '2 KitKat Hot Chocolate', '2 Caramel Latte', '2 Chocolaty Mocha', '2 OldTown Hazelnut', '2 OldTown White Coffee Surprise']
     },
     // Individual coffees (100 each)
-    'tora-bika': { name: 'Torabika Cappuccino', price: 50, emoji: '☕', imgUrl: '' }, 
-    'kitkat': { name: 'KitKat Hot Chocolate', price: 100, emoji: '🍫', imgUrl: '' }, 
-    'caramel': { name: 'Caramel Latte', price: 100, emoji: '🧋', imgUrl: '' },
-    'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: '' },
-    'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: '' },
-    'white': { name: 'OldTown White Coffee', price: 100, emoji: '🌸', imgUrl: '' }
+    'tora-bika': { name: 'Torabika Cappuccino', price: 50, emoji: '☕', imgUrl: 'image_8.png' }, // ADDED image URL for Torabika
+    'kitkat': { name: 'KitKat Hot Chocolate', price: 100, emoji: '🍫', imgUrl: 'placeholder-kitkat.png' }, // Placeholder URLs
+    'caramel': { name: 'Caramel Latte', price: 100, emoji: '🧋', imgUrl: 'placeholder-caramel.png' },
+    'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'placeholder-mocha.png' },
+    'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'placeholder-hazelnut.png' },
+    'white': { name: 'OldTown White Coffee', price: 100, emoji: '🌸', imgUrl: 'placeholder-white.png' }
 };
 
 // ========== CART STATE ==========
@@ -1322,8 +1339,10 @@ function renderCarousel() {
 
         return `
             <div class="product-item">
+                <!-- Background image layer -->
                 <div class="pi-image-bg" style="${hasImageUrl}"></div>
                 
+                <!-- Content layer -->
                 <div class="pi-content">
                     <span class="pi-tag">🔥 100 BDT</span>
                     <div class="pi-emoji" style="${emojiStyle}">${p.emoji}</div>
@@ -1548,6 +1567,9 @@ function submitOrder(e) {
     });
 })();
 </script>
+
+<!-- Free Hit Counter Pixel -->
+<img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=cupiicoffee.store" alt="Hits" style="height:0;width:0;border:0;">
 
 </body>
 </html>
