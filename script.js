@@ -51,19 +51,26 @@ function renderCarousel() {
     
     inner.innerHTML = coffees.map(key => {
         const p = PRODUCTS[key];
+        
+        // Hide the emoji if we are showing an image
         const emojiStyle = p.imgUrl ? 'display:none;' : '';
-        const hasImageUrl = p.imgUrl ? `background-image: url('${p.imgUrl}'); display: block;` : 'display: none;';
+        const hasImageUrl = p.imgUrl ? `background-image: url('${p.imgUrl}');` : '';
 
         return `
             <div class="product-item">
-                <span class="pi-tag">🔥 100 BDT</span>
+                <!-- Background image layer -->
                 <div class="pi-image-bg" style="${hasImageUrl}"></div>
-                <div class="pi-emoji" style="${emojiStyle}">${p.emoji}</div>
-                <div class="pi-name">${p.name}</div>
-                <div class="pi-desc">Individual sachet</div>
-                <div class="pi-footer">
-                    <span class="pi-price">BDT ${p.price}</span>
-                    <button class="pi-btn" onclick="addToCart('${key}', this)">+ Add</button>
+                
+                <!-- Content layer floating over image -->
+                <div class="pi-content">
+                    <span class="pi-tag">🔥 100 BDT</span>
+                    <div class="pi-emoji" style="${emojiStyle}">${p.emoji}</div>
+                    <div class="pi-name">${p.name}</div>
+                    <div class="pi-desc">Individual sachet</div>
+                    <div class="pi-footer">
+                        <span class="pi-price">BDT ${p.price}</span>
+                        <button class="pi-btn" onclick="addToCart('${key}', this)">+ Add</button>
+                    </div>
                 </div>
             </div>
         `;
