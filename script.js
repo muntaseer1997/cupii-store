@@ -23,8 +23,8 @@ const PRODUCTS = {
         items: ['5 Torabika Cappuccino', '2 KitKat Hot Chocolate', '2 Caramel Latte', '2 Chocolaty Mocha', '2 OldTown Hazelnut', '2 OldTown White Coffee Surprise']
     },
     // Individual coffees (100 each)
-    'tora-bika': { name: 'Torabika Cappuccino', price: 100, emoji: '☕', imgUrl: 'torabika.png' },
-    'kitkat': { name: 'KitKat Hot Chocolate', price: 100, emoji: '🍫', imgUrl: 'kitkat.png' },
+    'tora-bika': { name: 'Torabika Cappuccino', price: 50, emoji: '☕', imgUrl: 'torabika.png' },
+    'kitkat': { name: 'KitKat Hot Chocolate', price: 120, emoji: '🍫', imgUrl: 'kitkat.png' },
     'caramel': { name: 'Caramel Latte', price: 100, emoji: '🧋', imgUrl: 'caramel.png' },
     'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.png' },
     'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'hazelnut.png' },
