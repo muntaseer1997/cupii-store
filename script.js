@@ -23,7 +23,7 @@ const PRODUCTS = {
         items: ['5 Torabika Cappuccino', '2 KitKat Hot Chocolate', '2 Caramel Latte', '2 Chocolaty Mocha', '2 OldTown Hazelnut', '2 OldTown White Coffee Surprise']
     },
     // Individual coffees (100 each)
-    'tora-bika': { name: 'Torabika Cappuccino', price: 50, emoji: '☕', imgUrl: 'torabika.png' },
+    'tora-bika': { name: 'Torabika Cappuccino', price: 40, emoji: '☕', imgUrl: 'torabika.png' },
     'kitkat': { name: 'KitKat Hot Chocolate', price: 120, emoji: '🍫', imgUrl: 'kitkat.png' },
     'caramel': { name: 'Caramel Latte', price: 100, emoji: '🧋', imgUrl: 'caramel.png' },
     'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.png' },
@@ -63,7 +63,7 @@ function renderCarousel() {
                 
                 <!-- Content layer floating over image -->
                 <div class="pi-content">
-                    <span class="pi-tag">🔥 100 BDT</span>
+                    <span class="pi-tag"></span>
                     <div class="pi-emoji" style="${emojiStyle}">${p.emoji}</div>
                     <div class="pi-name">${p.name}</div>
                     <div class="pi-desc">Individual sachet</div>
