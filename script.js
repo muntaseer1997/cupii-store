@@ -13,17 +13,17 @@ const PRODUCTS = {
         price: 595,
         emoji: '🌟',
         desc: 'The ultimate coffee lover\'s experience. Extra selections, richer variety.',
-        items: ['5 Torabika Cappuccino', '1 KitKat Hot Chocolate', '1 Caramel Latte', '1 Chocolaty Mocha', '1 OldTown Hazelnut']
+        items: ['3 Torabika Cappuccino', '1 KitKat Hot Chocolate', '1 Caramel Latte', '1 Chocolaty Mocha', '1 OldTown Hazelnut', '1 OldTown White Coffee Salted Caramel']
     },
     mega: {
         name: 'Mega Combo Box',
         price: 1095,
         emoji: '🏆',
         desc: 'The grandest coffee experience. A month-long supply for the serious enthusiast.',
-        items: ['5 Torabika Cappuccino', '2 KitKat Hot Chocolate', '2 Caramel Latte', '2 Chocolaty Mocha', '2 OldTown Hazelnut', '2 OldTown White Coffee Surprise']
+        items: ['5 Torabika Cappuccino', '2 KitKat Hot Chocolate', '2 Caramel Latte', '2 Chocolaty Mocha', '2 OldTown Hazelnut', '2 OldTown White Coffee Salted Caramel']
     },
     // Individual coffees (100 each)
-    'tora-bika': { name: 'Torabika Cappuccino', price: 40, emoji: '☕', imgUrl: 'torabika.png' },
+    'tora-bika': { name: 'Torabika Cappuccino', price: 35, emoji: '☕', imgUrl: 'torabika.png' },
     'kitkat': { name: 'KitKat Hot Chocolate', price: 120, emoji: '🍫', imgUrl: 'kitkat.png' },
     'caramel': { name: 'Caramel Latte', price: 100, emoji: '🧋', imgUrl: 'caramel.png' },
     'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.png' },
