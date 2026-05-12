@@ -10,7 +10,7 @@ const PRODUCTS = {
     },
     premium: {
         name: 'Premium Combo',
-        price: 595,
+        price: 535,
         emoji: '🌟',
         desc: 'The ultimate coffee lover\'s experience. Extra selections, richer variety.',
         items: ['3 Torabika Cappuccino', '1 KitKat Hot Chocolate', '1 Caramel Latte', '1 Chocolaty Mocha', '1 OldTown Hazelnut', '1 OldTown White Coffee Salted Caramel']
