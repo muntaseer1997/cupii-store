@@ -83,6 +83,14 @@ function addToCart(key, btn) {
     
     if (!cart[key]) cart[key] = 0;
     cart[key]++;
+
+    // --- ADD THIS LINE FOR META PIXEL ---
+    fbq('track', 'AddToCart', {
+        content_name: PRODUCTS[key].name,
+        value: PRODUCTS[key].price,
+        currency: 'BDT'
+    });
+    // ------------------------------------
     
     // Flash animation
     if (btn) {
@@ -116,6 +124,13 @@ function updateCart() {
         sticky.classList.remove('active');
         return;
     }
+    // --- ADD THIS LOGIC FOR META PIXEL ---
+    // We only want to fire this once per session when they first add something
+    if (!window.checkoutStarted) {
+        fbq('track', 'InitiateCheckout');
+        window.checkoutStarted = true; 
+    }
+    // ------------------------------------
 
     empty.style.display = 'none';
     summary.style.display = 'block';
@@ -220,6 +235,15 @@ function closeModal(e) {
 // ========== FORM SUBMISSION ==========
 function submitOrder(e) {
     e.preventDefault();
+    // Get form data to pass to Meta for better matching
+    const customerName = document.getElementById('name').value;
+    const customerPhone = document.getElementById('phone').value;
+
+    // "Identify" the user to Meta
+    fbq('init', '912706091799052', {
+        'fn': customerName,
+        'ph': customerPhone
+    });
 
     // Check cart
     if (Object.keys(cart).length === 0) {
@@ -247,6 +271,12 @@ function submitOrder(e) {
     .then(r => r.json())
     .then(data => {
         if (data.success) {
+            // --- ADD THIS LINE FOR META PIXEL ---
+            fbq('track', 'Purchase', {
+                value: document.getElementById('fTotal').value,
+                currency: 'BDT'
+            });
+            // ------------------------------------
             document.getElementById('checkout-section').style.display = 'none';
             document.getElementById('successCard').style.display = 'block';
             window.scrollTo({ top: 0, behavior: 'smooth' });
