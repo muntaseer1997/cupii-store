@@ -35,12 +35,12 @@ const PRODUCTS = {
     'Toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'Toblerone.png' },
     
     // Premium imported brands
-    'davidoff': { name: 'Davidoff Classic', price: 1050, emoji: '🏆', imgUrl: 'davidoff.png' },
-    'macgold': { name: 'Mac Gold Premium', price: 995, emoji: '✨', imgUrl: 'macgold.png' },
-    'nescafe-gold': { name: 'Nescafé Gold', price: 950, emoji: '👑', imgUrl: 'nescafe-gold.png' },
-    'lavazza': { name: 'Lavazza Oro', price: 1100, emoji: '🌟', imgUrl: 'lavazza.png' },
-    'illy': { name: 'Illycaffè Classico', price: 1200, emoji: '💎', imgUrl: 'illy.png' },
-    'jacobs': { name: 'Jacobs Cronat', price: 890, emoji: '☕', imgUrl: 'jacobs.png' }
+    'davidoff': { name: 'Davidoff Rich Aroma', price: 940, emoji: '🏆', imgUrl: 'davidoff.png' },
+    'macgold': { name: 'Mac Gold', price: 1200, emoji: '✨', imgUrl: 'macgold.png' },
+    'nescafe-gold': { name: 'Nescafé Gold', price: 1500, emoji: '👑', imgUrl: 'nescafe-gold.png' },
+    'jacobs': { name: 'Jacobs Gold', price: 1000, emoji: '🌟', imgUrl: 'jacobsg.png' },
+    'davidoff-fine': { name: 'Davidoff Fine Aroma', price: 1000, emoji: '💎', imgUrl: 'davidofffine.png' },
+    'jacobs-Monarch': { name: 'Jacobs Monarch', price: 1000, emoji: '☕', imgUrl: 'jacobsm.png' }
 };
 
 // ========== CART STATE ==========
