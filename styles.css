@@ -313,7 +313,7 @@ header h1 {
     font-size: 0.65em;
     color: var(--muted);
     line-height: 1.4;
-    margin-bottom: 10px;
+    margin-bottom: auto;
 }
 
 .pi-footer {
