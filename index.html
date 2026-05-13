@@ -82,7 +82,20 @@ src="https://www.facebook.com/tr?id=912706091799052&ev=PageView&noscript=1"
             <div class="carousel-inner" id="carouselInner"></div>
         </div>
     </section>
+<!-- ========== PREMIUM IMPORTED BRANDS ========== -->
+    <section class="section">
+        <div class="section-head">
+            <div class="live-dot"></div>
+            <h3>Premium Imported Brands</h3>
+        </div>
+        <p class="section-sub">International coffee excellence • Single sachets or bulk</p>
 
+        <div class="carousel" id="premiumCarousel">
+            <div class="carousel-inner" id="premiumCarouselInner"></div>
+        </div>
+    </section>
+
+    <!-- ========== BUNDLES ========== -->
     <!-- ========== BUNDLES ========== -->
     <section class="section">
         <h3 style="margin-bottom:4px">Coffee Bundles</h3>
@@ -264,13 +277,22 @@ src="https://www.facebook.com/tr?id=912706091799052&ev=PageView&noscript=1"
 
 <!-- ========== MODAL ========== -->
 <div class="modal-bg" id="modalBg" onclick="closeModal(event)">
-    <div class="modal" id="modal">
-        <button class="modal-close" onclick="closeModal()">✕</button>
-        <div class="modal-emoji" id="mEmoji">☕</div>
-        <h3 id="mTitle"></h3>
-        <p id="mDesc"></p>
-        <ul class="modal-list" id="mList"></ul>
-        <button class="modal-action" onclick="addFromModal()">Add to Order →</button>
+    <div class="modal" id="modal" style="background: none; box-shadow: none;">
+        <!-- FULL BACKGROUND IMAGE -->
+        <div class="modal-image-full" id="mProductImage"></div>
+        
+        <!-- SEMI-TRANSPARENT OVERLAY WITH TEXT -->
+        <div class="modal-overlay">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            
+            <div class="modal-content">
+                <div class="modal-emoji" id="mEmoji">☕</div>
+                <h3 id="mTitle"></h3>
+                <p id="mDesc"></p>
+                <ul class="modal-list" id="mList"></ul>
+                <button class="modal-action" onclick="addFromModal()">Add to Order →</button>
+            </div>
+        </div>
     </div>
 </div>
 
