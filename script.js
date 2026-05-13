@@ -25,10 +25,14 @@ const PRODUCTS = {
     // Individual coffees
     'tora-bika': { name: 'Torabika Cappuccino', price: 35, emoji: '☕', imgUrl: 'torabika.png' },
     'kitkat': { name: 'KitKat Hot Chocolate', price: 120, emoji: '🍫', imgUrl: 'kitkat.png' },
-    'caramel': { name: 'Caramel Latte', price: 100, emoji: '🧋', imgUrl: 'caramel.png' },
+    'caramel': { name: 'Caramel Latte', price: 100, emoji: '🥞', imgUrl: 'caramel.png' },
     'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.png' },
     'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'hazelnut.png' },
     'white': { name: 'OldTown White Coffee', price: 100, emoji: '🌸', imgUrl: 'white-coffee.png' },
+    'Pocky': { name: 'Pocky Chocolate', price: 300, emoji: '🍰', imgUrl: 'Pocky.png' },
+    'Cadbury': { name: 'Cadbury Milk Chocolate', price: 1500, emoji: '🟫', imgUrl: 'Cadbury.png' },
+    'Kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'Kinder.png' },
+    'Toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'Toblerone.png' },
     
     // Premium imported brands
     'davidoff': { name: 'Davidoff Classic', price: 1050, emoji: '🏆', imgUrl: 'davidoff.png' },
