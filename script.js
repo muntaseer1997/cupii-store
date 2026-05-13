@@ -29,7 +29,7 @@ const PRODUCTS = {
     'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.png' },
     'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'hazelnut.png' },
     'white': { name: 'OldTown White Coffee', price: 100, emoji: '🌸', imgUrl: 'white-coffee.png' }
-};
+
 // Premium imported brands
     'davidoff': { name: 'Davidoff Classic', price: 1050, emoji: '🏆', imgUrl: 'davidoff.png' },
     'macgold': { name: 'Mac Gold Premium', price: 995, emoji: '✨', imgUrl: 'macgold.png' },
@@ -37,7 +37,7 @@ const PRODUCTS = {
     'jacobs': { name: 'Jacobs Cronat', price: 1100, emoji: '🌟', imgUrl: 'jacobs.png' },
     'tora-bika': { name: 'Tora Bika Cappuccino', price: 640, emoji: '💎', imgUrl: 'Tora.png' },
     'Aik-Cheong': { name: 'Aik Cheong Cappuccino', price: 890, emoji: '☕', imgUrl: 'Aik.png' }
-
+};
 // ========== CART STATE ==========
 let cart = {};
 let modalCurrentKey = null;
