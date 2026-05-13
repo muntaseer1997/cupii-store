@@ -320,7 +320,7 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
+    margin-top: 10px;
 }
 
 .pi-price {
@@ -339,6 +339,7 @@ header h1 {
     cursor: pointer;
     transition: background 0.2s;
     font-family: 'Poppins', sans-serif;
+     border-radius: 20px;
 }
 
 .pi-btn:hover { background: var(--mid-green); }
@@ -1233,10 +1234,4 @@ footer {
 .modal-close:hover {
     background: white;
     transform: scale(1.1);
-}
-/* Makes the + Add button smaller specifically in the individual product grid */
-.product-grid .add-btn {
-    padding: 6px 12px;
-    font-size: 0.8em;
-    border-radius: 15px;
 }
