@@ -1231,3 +1231,9 @@ footer {
     background: white;
     transform: scale(1.1);
 }
+/* Makes the + Add button smaller specifically in the individual product grid */
+.product-grid .add-btn {
+    padding: 6px 12px;
+    font-size: 0.8em;
+    border-radius: 15px;
+}
