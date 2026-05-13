@@ -234,11 +234,15 @@ function changeQty(key, delta) {
     if (cart[key] === 0) delete cart[key];
     updateCart();
 }
-
-function setQty(key, val) {
-    const n = parseInt(val) || 1;
-    cart[key] = Math.max(1, n);
-    updateCart();
+function updateQuantity(id, delta) {
+    if (CART[id]) {
+        CART[id] += delta;
+        // If quantity drops to 0 or below, remove it from the cart completely
+        if (CART[id] <= 0) {
+            delete CART[id];
+        }
+        updateCartUI();
+    }
 }
 
 function removeFromCart(key) {
