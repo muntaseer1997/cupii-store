@@ -230,7 +230,7 @@ function updateCart() {
 }
 
 function changeQty(key, delta) {
-    cart[key] = Math.max(1, cart[key] + delta);
+    cart[key] = Math.max(0, cart[key] + delta);
     if (cart[key] === 0) delete cart[key];
     updateCart();
 }
