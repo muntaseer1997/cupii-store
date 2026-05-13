@@ -261,6 +261,12 @@ function viewBundle(key) {
     document.getElementById('modalBg').classList.add('open');
     document.body.style.overflow = 'hidden';
 }
+function closeModal(e) {
+    if (e && e.target !== document.getElementById('modalBg')) return;
+    document.getElementById('modalBg').classList.remove('open');
+    document.body.style.overflow = '';
+    modalCurrentKey = null;
+}
 // ========== VIEW PREMIUM PRODUCT ==========
 function viewPremium(key) {
     const p = PRODUCTS[key];
@@ -287,13 +293,6 @@ function viewPremium(key) {
     document.getElementById('modalBg').classList.add('open');
     document.body.style.overflow = 'hidden';
 }
-function closeModal(e) {
-    if (e && e.target !== document.getElementById('modalBg')) return;
-    document.getElementById('modalBg').classList.remove('open');
-    document.body.style.overflow = '';
-    modalCurrentKey = null;
-}
-
 // ========== FORM SUBMISSION ==========
 function submitOrder(e) {
     e.preventDefault();
