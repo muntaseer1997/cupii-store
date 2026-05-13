@@ -30,6 +30,13 @@ const PRODUCTS = {
     'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'hazelnut.png' },
     'white': { name: 'OldTown White Coffee', price: 100, emoji: '🌸', imgUrl: 'white-coffee.png' }
 };
+// Premium imported brands
+    'davidoff': { name: 'Davidoff Classic', price: 1050, emoji: '🏆', imgUrl: 'davidoff.png' },
+    'macgold': { name: 'Mac Gold Premium', price: 995, emoji: '✨', imgUrl: 'macgold.png' },
+    'nescafe-gold': { name: 'Nescafé Gold', price: 950, emoji: '👑', imgUrl: 'nescafe-gold.png' },
+    'jacobs': { name: 'Jacobs Cronat', price: 1100, emoji: '🌟', imgUrl: 'jacobs.png' },
+    'tora-bika': { name: 'Tora Bika Cappuccino', price: 640, emoji: '💎', imgUrl: 'Tora.png' },
+    'Aik-Cheong': { name: 'Aik Cheong Cappuccino', price: 890, emoji: '☕', imgUrl: 'Aik.png' }
 
 // ========== CART STATE ==========
 let cart = {};
@@ -41,6 +48,7 @@ const MIN_ORDER = 300;
 // ========== INIT ==========
 document.addEventListener('DOMContentLoaded', function() {
     renderCarousel();
+    renderPremiumCarousel();  // ← ADD THIS LINE
     updateCart();
 });
 
@@ -76,7 +84,36 @@ function renderCarousel() {
         `;
     }).join('');
 }
+// ========== PREMIUM CAROUSEL RENDERING ==========
+function renderPremiumCarousel() {
+    const inner = document.getElementById('premiumCarouselInner');
+    const premiums = ['davidoff', 'macgold', 'nescafe-gold', 'lavazza', 'illy', 'jacobs'];
+    
+    inner.innerHTML = premiums.map(key => {
+        const p = PRODUCTS[key];
+        const emojiStyle = p.imgUrl ? 'display:none;' : '';
+        const hasImageUrl = p.imgUrl ? `background-image: url('${p.imgUrl}');` : '';
 
+        return `
+            <div class="product-item">
+                <div class="pi-image-bg" style="${hasImageUrl}"></div>
+                <div class="pi-content">
+                    <span class="pi-tag"></span>
+                    <div class="pi-emoji" style="${emojiStyle}">${p.emoji}</div>
+                    <div class="pi-name">${p.name}</div>
+                    <div class="pi-desc">Premium Import</div>
+                    <div class="pi-footer">
+                        <span class="pi-price">BDT ${p.price}</span>
+                        <div class="pi-button-group">
+                            <button class="pi-btn-view" onclick="viewPremium('${key}')">👁 View</button>
+                            <button class="pi-btn" onclick="addToCart('${key}', this)">+ Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
 // ========== ADD TO CART ==========
 function addToCart(key, btn) {
     if (!PRODUCTS[key]) return;
@@ -224,7 +261,32 @@ function viewBundle(key) {
     document.getElementById('modalBg').classList.add('open');
     document.body.style.overflow = 'hidden';
 }
+// ========== VIEW PREMIUM PRODUCT ==========
+function viewPremium(key) {
+    const p = PRODUCTS[key];
+    modalCurrentKey = key;
 
+    const modalImage = document.getElementById('mProductImage');
+    if (modalImage) {
+        modalImage.style.backgroundImage = `url('${p.imgUrl}')`;
+    }
+
+    document.getElementById('mEmoji').textContent = p.emoji;
+    document.getElementById('mTitle').textContent = p.name;
+    document.getElementById('mDesc').textContent = `Premium imported coffee`;
+    
+    const list = document.getElementById('mList');
+    list.innerHTML = `
+        <li><strong>Price:</strong> BDT ${p.price}</li>
+        <li>100% Imported Premium Blend</li>
+        <li>Perfect for daily consumption</li>
+        <li>Rich, authentic taste</li>
+        <li>Easy instant preparation</li>
+    `;
+
+    document.getElementById('modalBg').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
 function closeModal(e) {
     if (e && e.target !== document.getElementById('modalBg')) return;
     document.getElementById('modalBg').classList.remove('open');
