@@ -305,7 +305,7 @@ header h1 {
     font-weight: 700;
     color: var(--dark-green);
     line-height: 1.3;
-    margin-bottom: 2px;
+    margin-bottom: auto;
     margin-top: auto;
 }
 
@@ -319,7 +319,7 @@ header h1 {
 .pi-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: auto;
     margin-top: auto;
 }
 
@@ -339,7 +339,7 @@ header h1 {
     cursor: pointer;
     transition: background 0.2s;
     font-family: 'Poppins', sans-serif;
-     border-radius: 5px;
+     border-radius: 20px;
 }
 
 .pi-btn:hover { background: var(--mid-green); }
