@@ -1073,7 +1073,7 @@ footer {
     .bundle-content h3 { font-size: 1.1em; }
     .price-now { font-size: 1.4em; }
     .bundle-actions { flex-direction: column; }
-    .btn-add, .btn-view { width: 100%; }
+    .btn-add, .btn-view { width: 65%; }
     .trust-item { padding: 5px 8px; font-size: 0.7em; }
     .modal { padding: 22px 16px; }
     .cart-item { grid-template-columns: 30px 1fr auto auto auto; font-size: 0.75em; }
