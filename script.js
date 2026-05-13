@@ -105,7 +105,7 @@ function renderPremiumCarousel() {
                     <div class="pi-footer">
                         <span class="pi-price">BDT ${p.price}</span>
                         <div class="pi-button-group">
-                            <button class="pi-btn-view" onclick="viewPremium('${key}')">👁 View</button>
+                            <button class="pi-btn-view" onclick="viewPremium('${key}')">🔍View</button>
                             <button class="pi-btn" onclick="addToCart('${key}', this)">+ Add</button>
                         </div>
                     </div>
