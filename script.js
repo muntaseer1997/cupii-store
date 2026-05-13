@@ -22,29 +22,29 @@ const PRODUCTS = {
         desc: 'The grandest coffee experience. A month-long supply for the serious enthusiast.',
         items: ['5 Torabika Cappuccino', '2 KitKat Hot Chocolate', '2 Caramel Latte', '2 Chocolaty Mocha', '2 OldTown Hazelnut', '2 OldTown White Coffee Salted Caramel']
     },
-    // Individual coffees (100 each)
+    // Individual coffees
     'tora-bika': { name: 'Torabika Cappuccino', price: 35, emoji: '☕', imgUrl: 'torabika.png' },
     'kitkat': { name: 'KitKat Hot Chocolate', price: 120, emoji: '🍫', imgUrl: 'kitkat.png' },
     'caramel': { name: 'Caramel Latte', price: 100, emoji: '🧋', imgUrl: 'caramel.png' },
     'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.png' },
     'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'hazelnut.png' },
-    'white': { name: 'OldTown White Coffee', price: 100, emoji: '🌸', imgUrl: 'white-coffee.png' }
-
-// Premium imported brands
+    'white': { name: 'OldTown White Coffee', price: 100, emoji: '🌸', imgUrl: 'white-coffee.png' },
+    
+    // Premium imported brands
     'davidoff': { name: 'Davidoff Classic', price: 1050, emoji: '🏆', imgUrl: 'davidoff.png' },
     'macgold': { name: 'Mac Gold Premium', price: 995, emoji: '✨', imgUrl: 'macgold.png' },
     'nescafe-gold': { name: 'Nescafé Gold', price: 950, emoji: '👑', imgUrl: 'nescafe-gold.png' },
-    'jacobs': { name: 'Jacobs Cronat', price: 1100, emoji: '🌟', imgUrl: 'jacobs.png' },
-    'tora-bika': { name: 'Tora Bika Cappuccino', price: 640, emoji: '💎', imgUrl: 'Tora.png' },
-    'Aik-Cheong': { name: 'Aik Cheong Cappuccino', price: 890, emoji: '☕', imgUrl: 'Aik.png' }
+    'lavazza': { name: 'Lavazza Oro', price: 1100, emoji: '🌟', imgUrl: 'lavazza.png' },
+    'illy': { name: 'Illycaffè Classico', price: 1200, emoji: '💎', imgUrl: 'illy.png' },
+    'jacobs': { name: 'Jacobs Cronat', price: 890, emoji: '☕', imgUrl: 'jacobs.png' }
 };
+
 // ========== CART STATE ==========
 let cart = {};
 let modalCurrentKey = null;
 
 // Minimum order value
 const MIN_ORDER = 300;
-
 // ========== INIT ==========
 document.addEventListener('DOMContentLoaded', function() {
     renderCarousel();
