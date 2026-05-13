@@ -229,6 +229,8 @@ header h1 {
     padding-bottom: 8px;
     cursor: grab;
     user-select: none;
+    height: 280px;
+    display: flex;
 }
 
 .carousel::-webkit-scrollbar { display: none; }
