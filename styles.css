@@ -449,7 +449,7 @@ header h1 {
 .price-section {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: auto;
     margin-bottom: 14px;
     padding-bottom: 14px;
     border-bottom: 2px solid #f0f0f0;
@@ -489,7 +489,7 @@ header h1 {
 .btn-view {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: auto;
     background: transparent;
     border: 1.5px solid var(--dark-green);
     color: var(--dark-green);
