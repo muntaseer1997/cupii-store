@@ -759,16 +759,21 @@ header h1 {
 .ci-remove {
     background: none;
     border: none;
-    color: #ddd;
-    font-size: 0.9em;
+    color: #cc0000; /* Darker red */
+    font-size: 1.4em; /* Larger X */
+    font-weight: 800; /* Thicker X */
     cursor: pointer;
-    padding: 4px 5px;
+    padding: 4px 8px;
     border-radius: 4px;
     transition: color 0.2s, background 0.2s;
     flex-shrink: 0;
+    opacity: 1; /* Fully visible */
 }
 
-.ci-remove:hover { color: var(--red); background: #fff0f0; }
+.ci-remove:hover { 
+    color: #990000; /* Even darker red on hover */
+    background: #fff0f0; 
+}
 
 .cart-summary {
     border-top: 2px solid #f0f0f0;
@@ -1231,9 +1236,11 @@ footer {
     background: white;
     transform: scale(1.1);
 }
-/* Makes the + Add button smaller specifically in the individual product grid */
-.product-grid .add-btn {
-    padding: 6px 12px;
-    font-size: 0.8em;
-    border-radius: 15px;
+/* Custom sizing for the + Add button in the carousels */
+#carousel .pi-btn,
+#premiumCarousel .pi-btn {
+    padding: 6px 14px;
+    font-size: 0.75em;
+    border-radius: 8px;
+    width: auto;
 }
