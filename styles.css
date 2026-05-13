@@ -339,7 +339,7 @@ header h1 {
     cursor: pointer;
     transition: background 0.2s;
     font-family: 'Poppins', sans-serif;
-     border-radius: 20px;
+     border-radius: 5px;
 }
 
 .pi-btn:hover { background: var(--mid-green); }
