@@ -333,9 +333,8 @@ header h1 {
     background: var(--dark-green);
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-size: 0.65em;
+    padding: 3px 6px;
+    font-size: 0.55em;
     font-weight: 700;
     cursor: pointer;
     transition: background 0.2s;
@@ -759,15 +758,14 @@ header h1 {
 .ci-remove {
     background: none;
     border: none;
-    color: #cc0000; /* Darker red */
-    font-size: 1.4em; /* Larger X */
-    font-weight: 800; /* Thicker X */
+    color: #333;
+    font-size: 1em;
     cursor: pointer;
     padding: 4px 8px;
     border-radius: 4px;
     transition: color 0.2s, background 0.2s;
     flex-shrink: 0;
-    opacity: 1; /* Fully visible */
+    font-weight: 700;
 }
 
 .ci-remove:hover { 
@@ -1235,12 +1233,4 @@ footer {
 .modal-close:hover {
     background: white;
     transform: scale(1.1);
-}
-/* Custom sizing for the + Add button in the carousels */
-#carousel .pi-btn,
-#premiumCarousel .pi-btn {
-    padding: 6px 14px;
-    font-size: 0.75em;
-    border-radius: 8px;
-    width: auto;
 }
