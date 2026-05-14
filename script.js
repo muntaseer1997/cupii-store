@@ -35,12 +35,18 @@ const PRODUCTS = {
     'Toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'Toblerone.png' },
     
     // Premium imported brands
-    'davidoff': { name: 'Davidoff Rich Aroma', price: 940, emoji: '🏆', imgUrl: 'davidoff.png' },
+    'kenco': { name: 'Kenco Coffee', price: 510, emoji: '🍰', imgUrl: 'kenco.png' },
     'macgold': { name: 'Mac Gold', price: 1200, emoji: '✨', imgUrl: 'macgold.png' },
+    'coffee-mate': { name: 'Nestle Coffee Mate', price: 450, emoji: '🟫', imgUrl: 'coffee-mate.png' },
     'nescafe-gold': { name: 'Nescafé Gold', price: 1500, emoji: '👑', imgUrl: 'nescafe-gold.png' },
+    'davidoff': { name: 'Davidoff Rich Aroma', price: 940, emoji: '🏆', imgUrl: 'davidoff.png' },
     'jacobs': { name: 'Jacobs Gold', price: 1000, emoji: '🌟', imgUrl: 'jacobsg.png' },
-    'davidoff-fine': { name: 'Davidoff Fine Aroma', price: 1000, emoji: '💎', imgUrl: 'davidofffine.png' },
+    'davidoff-fine': { name: 'Davidoff Fine Aroma', price: 940, emoji: '💎', imgUrl: 'davidoff-fine.png' },
     'jacobs-Monarch': { name: 'Jacobs Monarch', price: 1000, emoji: '☕', imgUrl: 'jacobsm.png' }
+    'davidoff-espresso ': { name: 'Davidoff Espresso', price: 940, emoji: '😋', imgUrl: 'davidoff-espresso.png' },
+    'cadbury': { name: 'Cadbury Milk Chocolate', price: 1500, emoji: '🍪', imgUrl: 'cadbury.png' },
+    'kitkat-chunky': { name: 'KitKat Chunky White Chocolate', price: 550, emoji: '🍫', imgUrl: 'kitkat-chunky.png' },
+    'toblerone': { name: 'Toblerone Pack', price: 600, emoji: '🥃', imgUrl: 'toblerone.png' }
 };
 
 // ========== CART STATE ==========
