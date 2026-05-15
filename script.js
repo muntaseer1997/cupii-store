@@ -31,12 +31,12 @@ const PRODUCTS = {
 'white': { name: 'OldTown White Coffee Salted Caramel', price: 100, emoji: '🌸', imgUrl: 'white-coffee.png', desc: 'Lighter roasted coffee with creamy taste and salted caramel weight: 31.6g' },
 'pocky': { name: 'Pocky Chocolate', price: 300, emoji: '🍰', imgUrl: 'Pocky.png', desc: 'Chocolate biscuit sticks treat weight: 33g' },
 'hershey-kisses': { name: 'Hershey's Kisses Milk Chocolate', price: 20, emoji: '🟫', imgUrl: 'hershey.png', desc: 'Classic milk chocolate kisses weight: 4.5g' },
-'kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'Kinder.png', desc: 'Crispy wafer with hazelnut filling weight: 40gm' },
-'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'Toblerone.png', desc: 'Nougat and almonds chocolate bar weight: 100g ' },
+'kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'kinder.png', desc: 'Crispy wafer with hazelnut filling weight: 40gm' },
+'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'toblerone.png', desc: 'Nougat and almonds chocolate bar weight: 100g ' },
 'galaxy-smooth': { name: 'Galaxy Smooth Milk', price: 280, emoji: '🧁', imgUrl: 'galaxy-smooth.png', desc: 'Smooth milk chocolate weight: 100g' },
 'kitkat-chocolate': { name: 'Kitkat chocolate', price: 50, emoji: '🍩', imgUrl: 'kitkat-chocolate.png', desc: 'Crispy wafer chocolate weight: 17.7g' },
 'hershey-kisses-cookies': { name: 'Hershey\'s Kisses Cookies & Cream', price: 20, emoji: '🍨', imgUrl: 'hershey-hershey.png', desc: 'Chocolate with cookies and cream weight: 4.5g' },
-'Snickers': { name: 'Snickers Chocolate', price: 50, emoji: '🍦', imgUrl: 'Snickers.png', desc: 'Peanuts, nougat and caramel chocolate weight: 14g' },
+'Snickers': { name: 'Snickers Chocolate', price: 50, emoji: '🍦', imgUrl: 'snickers.png', desc: 'Peanuts, nougat and caramel chocolate weight: 14g' },
 'cadbury-drinking': { name: 'Cadbury Drinking Chocolate', price: 1240, emoji: '😋', imgUrl: 'cadbury-drinking.png', desc: 'Premium chocolate drink mix coffee weight: 500gm' },
     
     // Premium imported brands
