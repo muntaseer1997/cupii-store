@@ -74,21 +74,20 @@ document.addEventListener('DOMContentLoaded', function() {
 // ========== CAROUSEL RENDERING ==========
 function renderCarousel() {
     const inner = document.getElementById('carouselInner');
+    if (!inner) return;
+    
     const coffees = ['tora-bika', 'kitkat', 'caramel', 'chocolaty', 'hazelnut', 'white', 'pocky', 'hershey-kisses', 'kinder', 'toblerone', 'galaxy-smooth', 'kitkat-chocolate', 'hershey-kisses-cookies', 'Snickers', 'cadbury-drinking'];
     
     inner.innerHTML = coffees.map(key => {
         const p = PRODUCTS[key];
+        if (!p) return '';
         
-        // Hide the emoji if we are showing an image
         const emojiStyle = p.imgUrl ? 'display:none;' : '';
         const hasImageUrl = p.imgUrl ? `background-image: url('${p.imgUrl}');` : '';
 
         return `
             <div class="product-item">
-                <!-- Background image layer -->
                 <div class="pi-image-bg" style="${hasImageUrl}"></div>
-                
-                <!-- Content layer floating over image -->
                 <div class="pi-content">
                     <span class="pi-tag"></span>
                     <div class="pi-emoji" style="${emojiStyle}">${p.emoji}</div>
@@ -103,13 +102,16 @@ function renderCarousel() {
         `;
     }).join('');
 }
-// ========== PREMIUM CAROUSEL RENDERING ==========
 function renderPremiumCarousel() {
     const inner = document.getElementById('premiumCarouselInner');
- const premiums = ['kenco', 'macgold', 'coffee-mate', 'nescafe-gold', 'davidoff', 'jacobs', 'davidoff-fine', 'jacobs-Monarch', 'davidoff-espresso', 'cadbury', 'kitkat-chunky', 'toblerone-pack', 'kinder-bueno', 'cadbury-silk', 'nutella-ferrero'];
+    if (!inner) return;
+    
+    const premiums = ['kenco', 'macgold', 'coffee-mate', 'nescafe-gold', 'davidoff', 'jacobs', 'davidoff-fine', 'jacobs-Monarch', 'davidoff-espresso', 'cadbury', 'kitkat-chunky', 'toblerone-pack', 'kinder-bueno', 'cadbury-silk', 'nutella-ferrero'];
     
     inner.innerHTML = premiums.map(key => {
         const p = PRODUCTS[key];
+        if (!p) return '';
+        
         const emojiStyle = p.imgUrl ? 'display:none;' : '';
         const hasImageUrl = p.imgUrl ? `background-image: url('${p.imgUrl}');` : '';
 
