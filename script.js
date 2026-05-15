@@ -47,13 +47,13 @@ const PRODUCTS = {
     'davidoff': { name: 'Davidoff Rich Aroma', price: 940, emoji: '🏆', imgUrl: 'davidoff.png' },
     'jacobs': { name: 'Jacobs Gold', price: 1000, emoji: '🌟', imgUrl: 'jacobsg.png' },
     'davidoff-fine': { name: 'Davidoff Fine Aroma', price: 940, emoji: '💎', imgUrl: 'davidoff-fine.png' },
-    'jacobs-Monarch': { name: 'Jacobs Monarch', price: 1000, emoji: '☕', imgUrl: 'jacobsm.png' }
+    'jacobs-Monarch': { name: 'Jacobs Monarch', price: 1000, emoji: '☕', imgUrl: 'jacobsm.png' },
     'davidoff-espresso ': { name: 'Davidoff Espresso', price: 940, emoji: '😋', imgUrl: 'davidoff-espresso.png' },
     'cadbury': { name: 'Cadbury Milk Chocolate', price: 1500, emoji: '🍪', imgUrl: 'cadbury.png' },
     'kitkat-chunky': { name: 'KitKat Chunky White Chocolate', price: 550, emoji: '🍫', imgUrl: 'kitkat-chunky.png' },
-    'toblerone': { name: 'Toblerone Pack', price: 600, emoji: '🥃', imgUrl: 'toblerone.png' }
-    'kinder-bueno': { name: 'Kinder Bueno', price: 640, emoji: '🍸', imgUrl: 'kinder-bueno.png' }
-    'cadbury-silk': { name: 'Cadbury Dairy Milk Silk Bubbly', price: 420, emoji: '🍹', imgUrl: 'cadbury-silk.png' }
+    'toblerone': { name: 'Toblerone Pack', price: 600, emoji: '🥃', imgUrl: 'toblerone.png' },
+    'kinder-bueno': { name: 'Kinder Bueno', price: 640, emoji: '🍸', imgUrl: 'kinder-bueno.png' },
+    'cadbury-silk': { name: 'Cadbury Dairy Milk Silk Bubbly', price: 420, emoji: '🍹', imgUrl: 'cadbury-silk.png' },
     'nutella-ferrero': { name: 'Nutella Ferrero', price: 680, emoji: '🎂', imgUrl: 'nutella-ferrero.png' }
 };
 
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ========== CAROUSEL RENDERING ==========
 function renderCarousel() {
     const inner = document.getElementById('carouselInner');
-    const coffees = ['tora-bika', 'kitkat', 'caramel', 'chocolaty', 'hazelnut', 'white'];
+    const coffees = ['tora-bika', 'kitkat', 'caramel', 'chocolaty', 'hazelnut', 'white', 'pocky', 'hershey-kisses', 'kinder', 'toblerone', 'galaxy-smooth', 'kitkat-chocolate', 'hershey-kisses-cookies', 'Snickers', 'cadbury-drinking'];
     
     inner.innerHTML = coffees.map(key => {
         const p = PRODUCTS[key];
@@ -105,7 +105,7 @@ function renderCarousel() {
 // ========== PREMIUM CAROUSEL RENDERING ==========
 function renderPremiumCarousel() {
     const inner = document.getElementById('premiumCarouselInner');
-    const premiums = ['davidoff', 'macgold', 'nescafe-gold', 'lavazza', 'illy', 'jacobs'];
+    const premiums = ['kenco', 'macgold', 'coffee-mate', 'nescafe-gold', 'davidoff', 'jacobs', 'davidoff-fine', 'jacobs-Monarch', 'davidoff-espresso', 'cadbury', 'kitkat-chunky', 'toblerone', 'kinder-bueno', 'cadbury-silk', 'nutella-ferrero'];
     
     inner.innerHTML = premiums.map(key => {
         const p = PRODUCTS[key];
