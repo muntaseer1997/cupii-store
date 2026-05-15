@@ -29,10 +29,15 @@ const PRODUCTS = {
     'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.png' },
     'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'hazelnut.png' },
     'white': { name: 'OldTown White Coffee', price: 100, emoji: '🌸', imgUrl: 'white-coffee.png' },
-    'Pocky': { name: 'Pocky Chocolate', price: 300, emoji: '🍰', imgUrl: 'Pocky.png' },
-    'Cadbury': { name: 'Cadbury Milk Chocolate', price: 1500, emoji: '🟫', imgUrl: 'Cadbury.png' },
-    'Kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'Kinder.png' },
-    'Toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'Toblerone.png' },
+    'pocky': { name: 'Pocky Chocolate', price: 300, emoji: '🍰', imgUrl: 'Pocky.png' },
+    'hershey-kisses': { name: 'Hershey’s Kisses Milk Chocolate', price: 20, emoji: '🟫', imgUrl: 'hershey.png' },
+    'kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'Kinder.png' },
+    'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'Toblerone.png' },
+    'galaxy-smooth': { name: 'Galaxy Smooth Milk', price: 280, emoji: '🌸', imgUrl: 'galaxy-smooth.png' },
+    'kitkat-chocolate': { name: 'Kitkat chocolate Box', price: 300, emoji: '🍰', imgUrl: 'kitkat-chocolate.png' },
+    'hershey-kisses-cookies': { name: 'Hershey’s Kisses Cookies & Cream', price: 20, emoji: '🟫', imgUrl: 'hershey-hershey.png' },
+    'kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'Kinder.png' },
+    'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'Toblerone.png' },
     
     // Premium imported brands
     'kenco': { name: 'Kenco Coffee', price: 510, emoji: '🍰', imgUrl: 'kenco.png' },
@@ -48,7 +53,7 @@ const PRODUCTS = {
     'kitkat-chunky': { name: 'KitKat Chunky White Chocolate', price: 550, emoji: '🍫', imgUrl: 'kitkat-chunky.png' },
     'toblerone': { name: 'Toblerone Pack', price: 600, emoji: '🥃', imgUrl: 'toblerone.png' }
     'kinder-bueno': { name: 'Kinder Bueno', price: 640, emoji: '🍸', imgUrl: 'kinder-bueno.png' }
-    'cadbury-silk': { name: 'Cadbury Dairy Milk Silk Bubbly', price: 600, emoji: '🍹', imgUrl: 'cadbury-silk.png' }
+    'cadbury-silk': { name: 'Cadbury Dairy Milk Silk Bubbly', price: 420, emoji: '🍹', imgUrl: 'cadbury-silk.png' }
     'nutella-ferrero': { name: 'Nutella Ferrero', price: 680, emoji: '🎂', imgUrl: 'nutella-ferrero.png' }
 };
 
