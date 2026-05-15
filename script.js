@@ -48,7 +48,7 @@ const PRODUCTS = {
     'jacobs': { name: 'Jacobs Gold', price: 1000, emoji: '🌟', imgUrl: 'jacobsg.png' },
     'davidoff-fine': { name: 'Davidoff Fine Aroma', price: 940, emoji: '💎', imgUrl: 'davidoff-fine.png' },
     'jacobs-Monarch': { name: 'Jacobs Monarch', price: 1000, emoji: '☕', imgUrl: 'jacobsm.png' },
-    'davidoff-espresso ': { name: 'Davidoff Espresso', price: 940, emoji: '😋', imgUrl: 'davidoff-espresso.png' },
+    'davidoff-espresso': { name: 'Davidoff Espresso', price: 940, emoji: '😋', imgUrl: 'davidoff-espresso.png' },
     'cadbury': { name: 'Cadbury Milk Chocolate', price: 1500, emoji: '🍪', imgUrl: 'cadbury.png' },
     'kitkat-chunky': { name: 'KitKat Chunky White Chocolate', price: 550, emoji: '🍫', imgUrl: 'kitkat-chunky.png' },
     'toblerone-pack': { name: 'Toblerone Pack', price: 600, emoji: '🥃', imgUrl: 'toblerone-pack.png' },
@@ -105,7 +105,7 @@ function renderCarousel() {
 // ========== PREMIUM CAROUSEL RENDERING ==========
 function renderPremiumCarousel() {
     const inner = document.getElementById('premiumCarouselInner');
-    const premiums = ['kenco', 'macgold', 'coffee-mate', 'nescafe-gold', 'davidoff', 'jacobs', 'davidoff-fine', 'jacobs-Monarch', 'davidoff-espresso', 'cadbury', 'kitkat-chunky', 'toblerone', 'kinder-bueno', 'cadbury-silk', 'nutella-ferrero'];
+ const premiums = ['kenco', 'macgold', 'coffee-mate', 'nescafe-gold', 'davidoff', 'jacobs', 'davidoff-fine', 'jacobs-Monarch', 'davidoff-espresso', 'cadbury', 'kitkat-chunky', 'toblerone-pack', 'kinder-bueno', 'cadbury-silk', 'nutella-ferrero'];
     
     inner.innerHTML = premiums.map(key => {
         const p = PRODUCTS[key];
