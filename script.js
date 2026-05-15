@@ -93,7 +93,7 @@ function renderCarousel() {
                     <span class="pi-tag"></span>
                     <div class="pi-emoji" style="${emojiStyle}">${p.emoji}</div>
                     <div class="pi-name">${p.name}</div>
-                    <div class="pi-desc">Individual sachet</div>
+                    <div class="pi-desc">${p.desc || 'Individual sachet'}</div>
                     <div class="pi-footer">
                         <span class="pi-price">BDT ${p.price}</span>
                         <button class="pi-btn" onclick="addToCart('${key}', this)">+ Add</button>
@@ -120,7 +120,7 @@ function renderPremiumCarousel() {
                     <span class="pi-tag"></span>
                     <div class="pi-emoji" style="${emojiStyle}">${p.emoji}</div>
                     <div class="pi-name">${p.name}</div>
-                    <div class="pi-desc">Premium Import</div>
+                    <div class="pi-desc">${p.desc || 'Premium Import'}</div>
                     <div class="pi-footer">
                         <span class="pi-price">BDT ${p.price}</span>
                         <div class="pi-button-group">
