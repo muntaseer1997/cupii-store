@@ -246,6 +246,7 @@ header h1 {
 .product-item {
     flex-shrink: 0;
     width: 165px;
+    height: 100%; 
     background: white;
     border-radius: var(--radius);
     box-shadow: var(--shadow-soft);
