@@ -197,11 +197,11 @@ const PRODUCTS = {
     ]
 },
 
-'cadbury': { 
+'cadburym': { 
     name: 'Cadbury Milk Chocolate', 
     price: 1500, 
     emoji: '🍪', 
-    imgUrl: 'cadbury.png', 
+    imgUrl: 'cadburym.png', 
     desc: 'Premium British milk chocolate weight: 700gm',
     details: 'Premium British milk chocolate from the trusted Cadbury brand',
     features: [
