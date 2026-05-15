@@ -1147,7 +1147,7 @@ footer {
     padding: 24px;
     border-radius: 0 0 16px 16px;
     z-index: 2;
-    max-height: 60%;
+    max-height: 30%;
     overflow-y: auto;
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
 }
