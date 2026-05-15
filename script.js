@@ -39,23 +39,267 @@ const PRODUCTS = {
 'Snickers': { name: 'Snickers Chocolate', price: 50, emoji: '🍦', imgUrl: 'snickers.png', desc: 'Peanuts, nougat and caramel chocolate weight: 14g' },
 'cadbury-drinking': { name: 'Cadbury Drinking Chocolate', price: 1240, emoji: '😋', imgUrl: 'cadbury-drinking.png', desc: 'Premium chocolate drink mix coffee weight: 500gm' },
     
-    // Premium imported brands
-'kenco': { name: 'Kenco Coffee', price: 510, emoji: '🍰', imgUrl: 'kenco.png', desc: 'Premium instant coffee from UK weight: 100gm' },
-'macgold': { name: 'Mac Gold', price: 1200, emoji: '✨', imgUrl: 'macgold.png', desc: 'Rich, aromatic premium instant coffee coffee weight: 200gm' },
-'coffee-mate': { name: 'Nestle Coffee Mate', price: 350, emoji: '🟫', imgUrl: 'coffee-mate.png', desc: 'Creamy coffee whitener and flavor enhancer coffee weight: 450gm' },
-'nescafe-gold': { name: 'Nescafé Gold', price: 1500, emoji: '👑', imgUrl: 'nescafe-gold.png', desc: 'Premium blend with smooth taste weight: 190gm' },
-'davidoff': { name: 'Davidoff Rich Aroma', price: 940, emoji: '🏆', imgUrl: 'davidoff.png', desc: 'Swiss premium coffee with rich flavor weight: 100gm' },
-'jacobs': { name: 'Jacobs Gold', price: 1000, emoji: '🌟', imgUrl: 'jacobsg.png', desc: 'Premium instant coffee, smooth and bold weight: 100gm' },
-'davidoff-fine': { name: 'Davidoff Fine Aroma', price: 940, emoji: '💎', imgUrl: 'davidoff-fine.png', desc: 'Delicate aroma with refined taste weight: 100gm' },
-'jacobs-Monarch': { name: 'Jacobs Monarch', price: 1000, emoji: '☕', imgUrl: 'jacobsm.png', desc: 'Royal blend of premium arabica coffee weight: 100gm' },
-'davidoff-espresso': { name: 'Davidoff Espresso', price: 940, emoji: '😋', imgUrl: 'davidoff-espresso.png', desc: 'Strong espresso style instant coffee weight: 100gm' },
-'cadbury': { name: 'Cadbury Milk Chocolate', price: 1500, emoji: '🍪', imgUrl: 'cadbury.png', desc: 'Premium British milk chocolate weight: 700gm' },
-'kitkat-chunky': { name: 'KitKat Chunky White Chocolate', price: 550, emoji: '🍫', imgUrl: 'kitkat-chunky.png', desc: 'Chunky wafer with white chocolate coating' },
-'toblerone-pack': { name: 'Toblerone Pack', price: 600, emoji: '🥃', imgUrl: 'toblerone-pack.png', desc: 'Swiss triangle chocolate with nougat weight: 200gm' },
-'kinder-bueno': { name: 'Kinder Bueno', price: 640, emoji: '🍸', imgUrl: 'kinder-bueno.png', desc: 'Wafer coated with milk and hazelnut weight: 200gm' },
-'cadbury-silk': { name: 'Cadbury Dairy Milk Silk Bubbly', price: 420, emoji: '🍹', imgUrl: 'cadbury-silk.png', desc: 'Soft bubbly milk chocolate weight: 120gm' },
-'nutella-ferrero': { name: 'Nutella Ferrero', price: 680, emoji: '🎂', imgUrl: 'nutella-ferrero.png', desc: 'Hazelnut and cocoa chocolate spread weight: 130gm' },
+// ═══════════════════════════════════════════════════════════════════════════
+// REPLACE YOUR PREMIUM PRODUCTS SECTION WITH THIS (lines 42-57)
+// ═══════════════════════════════════════════════════════════════════════════
 
+// Premium imported brands
+'kenco': { 
+    name: 'Kenco Coffee', 
+    price: 510, 
+    emoji: '🍰', 
+    imgUrl: 'kenco.png', 
+    desc: 'Premium instant coffee from UK weight: 100gm',
+    details: 'Smooth and refined premium instant coffee blend from the United Kingdom',
+    features: [
+        '<strong>Price:</strong> BDT 510',
+        'Origin: United Kingdom',
+        'Premium Quality Blend',
+        '100g Pack',
+        'Smooth, Rich Flavor',
+        'Perfect for filter coffee'
+    ]
+},
+
+'macgold': { 
+    name: 'Mac Gold', 
+    price: 1200, 
+    emoji: '✨', 
+    imgUrl: 'macgold.png', 
+    desc: 'Rich, aromatic premium instant coffee coffee weight: 200gm',
+    details: 'Rich and aromatic premium coffee blend with bold taste',
+    features: [
+        '<strong>Price:</strong> BDT 1200',
+        'Premium Blend',
+        'Rich & Bold Aroma',
+        '200g Pack',
+        'Strong, Authentic Taste',
+        'Ideal for serious coffee lovers'
+    ]
+},
+
+'coffee-mate': { 
+    name: 'Nestle Coffee Mate', 
+    price: 350, 
+    emoji: '🟫', 
+    imgUrl: 'coffee-mate.png', 
+    desc: 'Creamy coffee whitener and flavor enhancer coffee weight: 450gm',
+    details: 'Premium creamy whitener that enhances your coffee perfectly',
+    features: [
+        '<strong>Price:</strong> BDT 350',
+        'Creamy Texture',
+        '450g Pack',
+        'Coffee Flavor Enhancer',
+        'Blends Smoothly',
+        'Perfect for daily use'
+    ]
+},
+
+'nescafe-gold': { 
+    name: 'Nescafé Gold', 
+    price: 1500, 
+    emoji: '👑', 
+    imgUrl: 'nescafe-gold.png', 
+    desc: 'Premium blend with smooth taste weight: 190gm',
+    details: 'Luxury gold premium blend with smooth, refined taste profile',
+    features: [
+        '<strong>Price:</strong> BDT 1500',
+        'Gold Premium Blend',
+        'Smooth & Refined Taste',
+        '190g Pack',
+        'Premium Quality Guaranteed',
+        'Perfect gift for coffee enthusiasts'
+    ]
+},
+
+'davidoff': { 
+    name: 'Davidoff Rich Aroma', 
+    price: 940, 
+    emoji: '🏆', 
+    imgUrl: 'davidoff.png', 
+    desc: 'Swiss premium coffee with rich flavor weight: 100gm',
+    details: 'Swiss precision coffee with rich, complex aroma and flavor',
+    features: [
+        '<strong>Price:</strong> BDT 940',
+        'Swiss Premium Quality',
+        'Rich Aroma & Flavor',
+        '100g Pack',
+        'Complex Taste Profile',
+        'Perfect for connoisseurs'
+    ]
+},
+
+'jacobs': { 
+    name: 'Jacobs Gold', 
+    price: 1000, 
+    emoji: '🌟', 
+    imgUrl: 'jacobsg.png', 
+    desc: 'Premium instant coffee, smooth and bold weight: 100gm',
+    details: 'Premium instant coffee with perfect balance of smooth and bold',
+    features: [
+        '<strong>Price:</strong> BDT 1000',
+        'Jacobs Gold Premium',
+        'Smooth & Bold Taste',
+        '100g Pack',
+        'German Premium Quality',
+        'Balanced flavor profile'
+    ]
+},
+
+'davidoff-fine': { 
+    name: 'Davidoff Fine Aroma', 
+    price: 940, 
+    emoji: '💎', 
+    imgUrl: 'davidoff-fine.png', 
+    desc: 'Delicate aroma with refined taste weight: 100gm',
+    details: 'Delicate and refined premium coffee with subtle elegance',
+    features: [
+        '<strong>Price:</strong> BDT 940',
+        'Swiss Craftsmanship',
+        'Delicate Aroma',
+        '100g Pack',
+        'Fine, Refined Taste',
+        'Sophisticated flavor notes'
+    ]
+},
+
+'jacobs-Monarch': { 
+    name: 'Jacobs Monarch', 
+    price: 1000, 
+    emoji: '☕', 
+    imgUrl: 'jacobsm.png', 
+    desc: 'Royal blend of premium arabica coffee weight: 100gm',
+    details: 'Royal blend featuring premium arabica beans for exceptional quality',
+    features: [
+        '<strong>Price:</strong> BDT 1000',
+        'Premium Arabica Blend',
+        'Royal Quality Standard',
+        '100g Pack',
+        'Rich Arabica Flavor',
+        'Perfect morning coffee'
+    ]
+},
+
+'davidoff-espresso': { 
+    name: 'Davidoff Espresso', 
+    price: 940, 
+    emoji: '😋', 
+    imgUrl: 'davidoff-espresso.png', 
+    desc: 'Strong espresso style instant coffee weight: 100gm',
+    details: 'Strong and bold espresso-style instant coffee for intense flavor',
+    features: [
+        '<strong>Price:</strong> BDT 940',
+        'Espresso Style',
+        'Strong & Bold',
+        '100g Pack',
+        'Intense Flavor',
+        'Perfect for espresso lovers'
+    ]
+},
+
+'cadbury': { 
+    name: 'Cadbury Milk Chocolate', 
+    price: 1500, 
+    emoji: '🍪', 
+    imgUrl: 'cadbury.png', 
+    desc: 'Premium British milk chocolate weight: 700gm',
+    details: 'Premium British milk chocolate from the trusted Cadbury brand',
+    features: [
+        '<strong>Price:</strong> BDT 1500',
+        'British Premium Quality',
+        '700g Pack',
+        'Creamy Milk Chocolate',
+        'Family Size Pack',
+        'Perfect for gifting'
+    ]
+},
+
+'kitkat-chunky': { 
+    name: 'KitKat Chunky White Chocolate', 
+    price: 550, 
+    emoji: '🍫', 
+    imgUrl: 'kitkat-chunky.png', 
+    desc: 'Chunky wafer with white chocolate coating',
+    details: 'Chunky wafer layered with smooth white chocolate',
+    features: [
+        '<strong>Price:</strong> BDT 550',
+        'White Chocolate Coating',
+        'Chunky Wafer',
+        'Premium Quality',
+        'Delicious Snack',
+        'Great taste combination'
+    ]
+},
+
+'toblerone-pack': { 
+    name: 'Toblerone Pack', 
+    price: 600, 
+    emoji: '🥃', 
+    imgUrl: 'toblerone-pack.png', 
+    desc: 'Swiss triangle chocolate with nougat weight: 200gm',
+    details: 'Iconic Swiss triangle chocolate with nougat and almond layers',
+    features: [
+        '<strong>Price:</strong> BDT 600',
+        'Swiss Chocolate',
+        'Nougat & Almonds',
+        '200g Pack',
+        'Iconic Triangle Shape',
+        'Premium Swiss quality'
+    ]
+},
+
+'kinder-bueno': { 
+    name: 'Kinder Bueno', 
+    price: 640, 
+    emoji: '🍸', 
+    imgUrl: 'kinder-bueno.png', 
+    desc: 'Wafer coated with milk and hazelnut weight: 200gm',
+    details: 'Crispy wafer coated with creamy milk chocolate and hazelnut',
+    features: [
+        '<strong>Price:</strong> BDT 640',
+        'Crispy Wafer',
+        'Milk & Hazelnut Coating',
+        '200g Pack',
+        'Smooth Creamy Center',
+        'Italian quality chocolate'
+    ]
+},
+
+'cadbury-silk': { 
+    name: 'Cadbury Dairy Milk Silk Bubbly', 
+    price: 420, 
+    emoji: '🍹', 
+    imgUrl: 'cadbury-silk.png', 
+    desc: 'Soft bubbly milk chocolate weight: 120gm',
+    details: 'Soft and bubbly milk chocolate with airy texture',
+    features: [
+        '<strong>Price:</strong> BDT 420',
+        'Soft Bubbly Texture',
+        '120g Pack',
+        'Premium Milk Chocolate',
+        'Light & Airy',
+        'Melts in your mouth'
+    ]
+},
+
+'nutella-ferrero': { 
+    name: 'Nutella Ferrero', 
+    price: 680, 
+    emoji: '🎂', 
+    imgUrl: 'nutella-ferrero.png', 
+    desc: 'Hazelnut and cocoa chocolate spread weight: 130gm',
+    details: 'Premium hazelnut and cocoa chocolate spread from Ferrero',
+    features: [
+        '<strong>Price:</strong> BDT 680',
+        'Hazelnut & Cocoa Blend',
+        '130g Pack',
+        'Ferrero Quality',
+        'Spreadable Chocolate',
+        'Perfect for any occasion'
+    ]
+},
+
+// ═══════════════════════════════════════════════════════════════════════════
 };
 
 // ========== CART STATE ==========
@@ -293,6 +537,10 @@ function closeModal(e) {
     modalCurrentKey = null;
 }
 // ========== VIEW PREMIUM PRODUCT ==========
+// ═══════════════════════════════════════════════════════════════════════════
+// REPLACE YOUR viewPremium() FUNCTION WITH THIS (replace lines 296-320)
+// ═══════════════════════════════════════════════════════════════════════════
+
 function viewPremium(key) {
     const p = PRODUCTS[key];
     modalCurrentKey = key;
@@ -304,20 +552,31 @@ function viewPremium(key) {
 
     document.getElementById('mEmoji').textContent = p.emoji;
     document.getElementById('mTitle').textContent = p.name;
-    document.getElementById('mDesc').textContent = `Premium imported coffee`;
+    // Use custom details if provided, otherwise use default
+    document.getElementById('mDesc').textContent = p.details || 'Premium imported coffee';
     
     const list = document.getElementById('mList');
-    list.innerHTML = `
-        <li><strong>Price:</strong> BDT ${p.price}</li>
-        <li>100% Imported Premium Blend</li>
-        <li>Perfect for daily consumption</li>
-        <li>Rich, authentic taste</li>
-        <li>Easy instant preparation</li>
-    `;
+    
+    // Check if custom features exist for this product
+    if (p.features && p.features.length > 0) {
+        // Use custom features array
+        list.innerHTML = p.features.map(feature => `<li>${feature}</li>`).join('');
+    } else {
+        // Fallback to default text if no features provided
+        list.innerHTML = `
+            <li><strong>Price:</strong> BDT ${p.price}</li>
+            <li>100% Imported Premium Blend</li>
+            <li>Perfect for daily consumption</li>
+            <li>Rich, authentic taste</li>
+            <li>Easy instant preparation</li>
+        `;
+    }
 
     document.getElementById('modalBg').classList.add('open');
     document.body.style.overflow = 'hidden';
 }
+
+// ═══════════════════════════════════════════════════════════════════════════
 // ========== FORM SUBMISSION ==========
 function submitOrder(e) {
     e.preventDefault();
