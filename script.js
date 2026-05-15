@@ -33,11 +33,11 @@ const PRODUCTS = {
     'hershey-kisses': { name: 'Hershey’s Kisses Milk Chocolate', price: 20, emoji: '🟫', imgUrl: 'hershey.png' },
     'kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'Kinder.png' },
     'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'Toblerone.png' },
-    'galaxy-smooth': { name: 'Galaxy Smooth Milk', price: 280, emoji: '🌸', imgUrl: 'galaxy-smooth.png' },
-    'kitkat-chocolate': { name: 'Kitkat chocolate Box', price: 300, emoji: '🍰', imgUrl: 'kitkat-chocolate.png' },
-    'hershey-kisses-cookies': { name: 'Hershey’s Kisses Cookies & Cream', price: 20, emoji: '🟫', imgUrl: 'hershey-hershey.png' },
-    'kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'Kinder.png' },
-    'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'Toblerone.png' },
+    'galaxy-smooth': { name: 'Galaxy Smooth Milk', price: 280, emoji: '🧁', imgUrl: 'galaxy-smooth.png' },
+    'kitkat-chocolate': { name: 'Kitkat chocolate Box', price: 300, emoji: '🍩', imgUrl: 'kitkat-chocolate.png' },
+    'hershey-kisses-cookies': { name: 'Hershey’s Kisses Cookies & Cream', price: 20, emoji: '🍨', imgUrl: 'hershey-hershey.png' },
+    'Snickers': { name: 'Snickers Chocolate', price: 130, emoji: '🍦', imgUrl: 'Snickers.png' },
+    'cadbury-drinking': { name: 'Cadbury Drinking Chocolate', price: 300, emoji: '😋', imgUrl: 'cadbury-drinking.png' },
     
     // Premium imported brands
     'kenco': { name: 'Kenco Coffee', price: 510, emoji: '🍰', imgUrl: 'kenco.png' },
