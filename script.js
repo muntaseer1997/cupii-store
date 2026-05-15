@@ -51,7 +51,7 @@ const PRODUCTS = {
     'davidoff-espresso ': { name: 'Davidoff Espresso', price: 940, emoji: '😋', imgUrl: 'davidoff-espresso.png' },
     'cadbury': { name: 'Cadbury Milk Chocolate', price: 1500, emoji: '🍪', imgUrl: 'cadbury.png' },
     'kitkat-chunky': { name: 'KitKat Chunky White Chocolate', price: 550, emoji: '🍫', imgUrl: 'kitkat-chunky.png' },
-    'toblerone': { name: 'Toblerone Pack', price: 600, emoji: '🥃', imgUrl: 'toblerone.png' },
+    'toblerone-pack': { name: 'Toblerone Pack', price: 600, emoji: '🥃', imgUrl: 'toblerone-pack.png' },
     'kinder-bueno': { name: 'Kinder Bueno', price: 640, emoji: '🍸', imgUrl: 'kinder-bueno.png' },
     'cadbury-silk': { name: 'Cadbury Dairy Milk Silk Bubbly', price: 420, emoji: '🍹', imgUrl: 'cadbury-silk.png' },
     'nutella-ferrero': { name: 'Nutella Ferrero', price: 680, emoji: '🎂', imgUrl: 'nutella-ferrero.png' }
