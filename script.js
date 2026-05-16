@@ -29,7 +29,7 @@ const PRODUCTS = {
 'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.webp', desc: 'Coffee blended with chocolate weight: 25g' },
 'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'hazelnut.webp', desc: 'Premium hazelnut flavored instant coffee weight: 31.6g' },
 'white': { name: 'OldTown White Coffee Salted Caramel', price: 100, emoji: '🌸', imgUrl: 'white-coffee.webp', desc: 'Lighter roasted coffee with creamy taste and salted caramel weight: 31.6g' },
-'pocky': { name: 'Pocky Chocolate', price: 300, emoji: '🍰', imgUrl: 'Pocky.webp', desc: 'Chocolate biscuit sticks treat weight: 33g' },
+'pocky': { name: 'Pocky Chocolate', price: 300, emoji: '🍰', imgUrl: 'pocky.webp', desc: 'Chocolate biscuit sticks treat weight: 33g' },
 'hershey-kisses': { name: 'Hershey\'s Kisses Milk Chocolate', price: 20, emoji: '🟫', imgUrl: 'hershey.webp', desc: 'Classic milk chocolate kisses weight: 4.5g' },
 'kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'kinder.webp', desc: 'Crispy wafer with hazelnut filling weight: 40gm' },
 'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'toblerone.webp', desc: 'Nougat and almonds chocolate bar weight: 100g ' },
