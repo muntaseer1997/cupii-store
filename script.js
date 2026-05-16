@@ -23,21 +23,21 @@ const PRODUCTS = {
         items: ['5 Torabika Cappuccino', '2 KitKat Hot Chocolate', '2 Caramel Latte', '2 Chocolaty Mocha', '2 OldTown Hazelnut', '2 OldTown White Coffee Salted Caramel']
     },
     // Individual coffees
-'tora-bika': { name: 'Torabika Cappuccino', price: 35, emoji: '☕', imgUrl: 'torabika.png', desc: 'Smooth cappuccino instant coffee blend With Added Suger weight: 12.5g' },
-'kitkat': { name: 'KitKat Hot Chocolate', price: 120, emoji: '🍫', imgUrl: 'kitkat.png', desc: 'Rich chocolate hot beverage mix weight: 33g' },
-'caramel': { name: 'Caramel Latte', price: 100, emoji: '🥞', imgUrl: 'caramel.png', desc: 'Sweet caramel flavored latte weight: 23g' },
-'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.png', desc: 'Coffee blended with chocolate weight: 25g' },
-'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'hazelnut.png', desc: 'Premium hazelnut flavored instant coffee weight: 31.6g' },
-'white': { name: 'OldTown White Coffee Salted Caramel', price: 100, emoji: '🌸', imgUrl: 'white-coffee.png', desc: 'Lighter roasted coffee with creamy taste and salted caramel weight: 31.6g' },
-'pocky': { name: 'Pocky Chocolate', price: 300, emoji: '🍰', imgUrl: 'pocky.png', desc: 'Chocolate biscuit sticks treat weight: 33g' },
-'hershey-kisses': { name: 'Hershey\'s Kisses Milk Chocolate', price: 20, emoji: '🟫', imgUrl: 'hershey.png', desc: 'Classic milk chocolate kisses weight: 4.5g' },
-'kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'kinder.png', desc: 'Crispy wafer with hazelnut filling weight: 40gm' },
-'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'toblerone.png', desc: 'Nougat and almonds chocolate bar weight: 100g ' },
-'galaxy-smooth': { name: 'Galaxy Smooth Milk', price: 600, emoji: '🧁', imgUrl: 'galaxy-smooth.png', desc: 'Smooth milk chocolate weight: 200g' },
-'kitkat-chocolate': { name: 'Kitkat chocolate', price: 50, emoji: '🍩', imgUrl: 'kitkat-chocolate.png', desc: 'Crispy wafer chocolate weight: 17.7g' },
-'hershey-kisses-cookies': { name: 'Hershey\'s Kisses Cookies & Cream', price: 20, emoji: '🍨', imgUrl: 'hershey-hershey.png', desc: 'Chocolate with cookies and cream weight: 4.5g' },
-'Snickers': { name: 'Snickers Chocolate', price: 50, emoji: '🍦', imgUrl: 'snickers.png', desc: 'Peanuts, nougat and caramel chocolate weight: 14g' },
-'cadbury-drinking': { name: 'Cadbury Drinking Chocolate', price: 1240, emoji: '😋', imgUrl: 'cadbury-drinking.png', desc: 'Premium chocolate drink mix coffee weight: 500gm' },
+'tora-bika': { name: 'Torabika Cappuccino', price: 35, emoji: '☕', imgUrl: 'torabika.webP', desc: 'Smooth cappuccino instant coffee blend With Added Suger weight: 12.5g' },
+'kitkat': { name: 'KitKat Hot Chocolate', price: 120, emoji: '🍫', imgUrl: 'kitkat.webP', desc: 'Rich chocolate hot beverage mix weight: 33g' },
+'caramel': { name: 'Caramel Latte', price: 100, emoji: '🥞', imgUrl: 'caramel.webP', desc: 'Sweet caramel flavored latte weight: 23g' },
+'chocolaty': { name: 'Chocolaty Mocha', price: 100, emoji: '🤎', imgUrl: 'chocolaty.webP', desc: 'Coffee blended with chocolate weight: 25g' },
+'hazelnut': { name: 'OldTown Hazelnut', price: 100, emoji: '🌰', imgUrl: 'hazelnut.webP', desc: 'Premium hazelnut flavored instant coffee weight: 31.6g' },
+'white': { name: 'OldTown White Coffee Salted Caramel', price: 100, emoji: '🌸', imgUrl: 'white-coffee.webP', desc: 'Lighter roasted coffee with creamy taste and salted caramel weight: 31.6g' },
+'pocky': { name: 'Pocky Chocolate', price: 300, emoji: '🍰', imgUrl: 'pocky.webP', desc: 'Chocolate biscuit sticks treat weight: 33g' },
+'hershey-kisses': { name: 'Hershey\'s Kisses Milk Chocolate', price: 20, emoji: '🟫', imgUrl: 'hershey.webP', desc: 'Classic milk chocolate kisses weight: 4.5g' },
+'kinder': { name: 'Kinder Bueno', price: 130, emoji: '🍪', imgUrl: 'kinder.webP', desc: 'Crispy wafer with hazelnut filling weight: 40gm' },
+'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'toblerone.webP', desc: 'Nougat and almonds chocolate bar weight: 100g ' },
+'galaxy-smooth': { name: 'Galaxy Smooth Milk', price: 600, emoji: '🧁', imgUrl: 'galaxy-smooth.webP', desc: 'Smooth milk chocolate weight: 200g' },
+'kitkat-chocolate': { name: 'Kitkat chocolate', price: 50, emoji: '🍩', imgUrl: 'kitkat-chocolate.webP', desc: 'Crispy wafer chocolate weight: 17.7g' },
+'hershey-kisses-cookies': { name: 'Hershey\'s Kisses Cookies & Cream', price: 20, emoji: '🍨', imgUrl: 'hershey-hershey.webP', desc: 'Chocolate with cookies and cream weight: 4.5g' },
+'Snickers': { name: 'Snickers Chocolate', price: 50, emoji: '🍦', imgUrl: 'snickers.webP', desc: 'Peanuts, nougat and caramel chocolate weight: 14g' },
+'cadbury-drinking': { name: 'Cadbury Drinking Chocolate', price: 1240, emoji: '😋', imgUrl: 'cadbury-drinking.webP', desc: 'Premium chocolate drink mix coffee weight: 500gm' },
     
 // ═══════════════════════════════════════════════════════════════════════════
 // REPLACE YOUR PREMIUM PRODUCTS SECTION WITH THIS (lines 42-57)
@@ -48,7 +48,7 @@ const PRODUCTS = {
     name: 'Kenco Coffee', 
     price: 510, 
     emoji: '🍰', 
-    imgUrl: 'kenco.png', 
+    imgUrl: 'kenco.webP', 
     desc: 'Premium instant coffee from UK weight: 100gm',
     details: 'Smooth and refined premium instant coffee blend from the United Kingdom',
     features: [
@@ -65,7 +65,7 @@ const PRODUCTS = {
     name: 'Mac Gold', 
     price: 1200, 
     emoji: '✨', 
-    imgUrl: 'macgold.png', 
+    imgUrl: 'macgold.webP', 
     desc: 'Rich, aromatic premium instant coffee coffee weight: 200gm',
     details: 'Rich and aromatic premium coffee blend with bold taste',
     features: [
@@ -82,7 +82,7 @@ const PRODUCTS = {
     name: 'Nestle Coffee Mate', 
     price: 350, 
     emoji: '🟫', 
-    imgUrl: 'coffee-mate.png', 
+    imgUrl: 'coffee-mate.webP', 
     desc: 'Creamy coffee whitener and flavor enhancer coffee weight: 450gm',
     details: 'Premium creamy whitener that enhances your coffee perfectly',
     features: [
@@ -99,7 +99,7 @@ const PRODUCTS = {
     name: 'Nescafé Gold', 
     price: 1500, 
     emoji: '👑', 
-    imgUrl: 'nescafe-gold.png', 
+    imgUrl: 'nescafe-gold.webP', 
     desc: 'Premium blend with smooth taste weight: 190gm',
     details: 'Luxury gold premium blend with smooth, refined taste profile',
     features: [
@@ -116,7 +116,7 @@ const PRODUCTS = {
     name: 'Davidoff Rich Aroma', 
     price: 940, 
     emoji: '🏆', 
-    imgUrl: 'davidoff.png', 
+    imgUrl: 'davidoff.webP', 
     desc: 'Swiss premium coffee with rich flavor weight: 100gm',
     details: 'Swiss precision coffee with rich, complex aroma and flavor',
     features: [
@@ -133,7 +133,7 @@ const PRODUCTS = {
     name: 'Jacobs Gold', 
     price: 1000, 
     emoji: '🌟', 
-    imgUrl: 'jacobsg.png', 
+    imgUrl: 'jacobsg.webP', 
     desc: 'Premium instant coffee, smooth and bold weight: 100gm',
     details: 'Premium instant coffee with perfect balance of smooth and bold',
     features: [
@@ -150,7 +150,7 @@ const PRODUCTS = {
     name: 'Davidoff Fine Aroma', 
     price: 940, 
     emoji: '💎', 
-    imgUrl: 'davidoff-fine.png', 
+    imgUrl: 'davidoff-fine.webP', 
     desc: 'Delicate aroma with refined taste weight: 100gm',
     details: 'Delicate and refined premium coffee with subtle elegance',
     features: [
@@ -167,7 +167,7 @@ const PRODUCTS = {
     name: 'Jacobs Monarch', 
     price: 1000, 
     emoji: '☕', 
-    imgUrl: 'jacobsm.png', 
+    imgUrl: 'jacobsm.webP', 
     desc: 'Royal blend of premium arabica coffee weight: 100gm',
     details: 'Royal blend featuring premium arabica beans for exceptional quality',
     features: [
@@ -184,7 +184,7 @@ const PRODUCTS = {
     name: 'Davidoff Espresso', 
     price: 940, 
     emoji: '😋', 
-    imgUrl: 'davidoff-espresso.png', 
+    imgUrl: 'davidoff-espresso.webP', 
     desc: 'Strong espresso style instant coffee weight: 100gm',
     details: 'Strong and bold espresso-style instant coffee for intense flavor',
     features: [
@@ -201,7 +201,7 @@ const PRODUCTS = {
     name: 'Cadbury Milk Chocolate', 
     price: 1500, 
     emoji: '🍪', 
-    imgUrl: 'cadburym.png', 
+    imgUrl: 'cadburym.webP', 
     desc: 'Premium British milk chocolate weight: 700gm',
     details: 'Premium British milk chocolate from the trusted Cadbury brand',
     features: [
@@ -218,7 +218,7 @@ const PRODUCTS = {
     name: 'KitKat Chunky White Chocolate', 
     price: 550, 
     emoji: '🍫', 
-    imgUrl: 'kitkat-chunky.png', 
+    imgUrl: 'kitkat-chunky.webP', 
     desc: 'Chunky wafer with white chocolate coating',
     details: 'Chunky wafer layered with smooth white chocolate',
     features: [
@@ -235,7 +235,7 @@ const PRODUCTS = {
     name: 'Toblerone Pack', 
     price: 600, 
     emoji: '🥃', 
-    imgUrl: 'toblerone-pack.png', 
+    imgUrl: 'toblerone-pack.webP', 
     desc: 'Swiss triangle chocolate with nougat weight: 200gm',
     details: 'Iconic Swiss triangle chocolate with nougat and almond layers',
     features: [
@@ -252,7 +252,7 @@ const PRODUCTS = {
     name: 'Kinder Bueno', 
     price: 640, 
     emoji: '🍸', 
-    imgUrl: 'kinder-bueno.png', 
+    imgUrl: 'kinder-bueno.webP', 
     desc: 'Wafer coated with milk and hazelnut weight: 200gm',
     details: 'Crispy wafer coated with creamy milk chocolate and hazelnut',
     features: [
@@ -269,7 +269,7 @@ const PRODUCTS = {
     name: 'Cadbury Dairy Milk Silk Bubbly', 
     price: 420, 
     emoji: '🍹', 
-    imgUrl: 'cadbury-silk.png', 
+    imgUrl: 'cadbury-silk.webP', 
     desc: 'Soft bubbly milk chocolate weight: 120gm',
     details: 'Soft and bubbly milk chocolate with airy texture',
     features: [
@@ -286,7 +286,7 @@ const PRODUCTS = {
     name: 'Nutella Ferrero', 
     price: 680, 
     emoji: '🎂', 
-    imgUrl: 'nutella-ferrero.png', 
+    imgUrl: 'nutella-ferrero.webP', 
     desc: 'Hazelnut and cocoa chocolate spread weight: 130gm',
     details: 'Premium hazelnut and cocoa chocolate spread from Ferrero',
     features: [
