@@ -350,7 +350,7 @@ function renderPremiumCarousel() {
     const inner = document.getElementById('premiumCarouselInner');
     if (!inner) return;
     
-    const premiums = ['kenco', 'macgold', 'coffee-mate', 'nescafe-gold', 'davidoff', 'jacobs', 'davidoff-fine', 'jacobs-Monarch', 'davidoff-espresso', 'cadbury', 'kitkat-chunky', 'toblerone-pack', 'kinder-bueno', 'cadbury-silk', 'nutella-ferrero'];
+    const premiums = ['kenco', 'macgold', 'coffee-mate', 'nescafe-gold', 'davidoff', 'jacobs', 'davidoff-fine', 'jacobs-Monarch', 'davidoff-espresso', 'cadburym', 'kitkat-chunky', 'toblerone-pack', 'kinder-bueno', 'cadbury-silk', 'nutella-ferrero'];
     
     inner.innerHTML = premiums.map(key => {
         const p = PRODUCTS[key];
