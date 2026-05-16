@@ -35,7 +35,7 @@ const PRODUCTS = {
 'toblerone': { name: 'Toblerone Chocolate', price: 300, emoji: '😋', imgUrl: 'toblerone.webp', desc: 'Nougat and almonds chocolate bar weight: 100g ' },
 'galaxy-smooth': { name: 'Galaxy Smooth Milk', price: 600, emoji: '🧁', imgUrl: 'galaxy-smooth.webp', desc: 'Smooth milk chocolate weight: 200g' },
 'kitkat-chocolate': { name: 'Kitkat chocolate', price: 50, emoji: '🍩', imgUrl: 'kitkat-chocolate.webp', desc: 'Crispy wafer chocolate weight: 17.7g' },
-'hershey-kisses-cookies': { name: 'Hershey\'s Kisses Cookies & Cream', price: 20, emoji: '🍨', imgUrl: 'hershey-hershey.webp', desc: 'Chocolate with cookies and cream weight: 4.5g' },
+'hershey-kisses-cookies': { name: 'Hershey\'s Kisses Cookies & Cream', price: 20, emoji: '🍨', imgUrl: 'hershey-kisses-cookies.webp', desc: 'Chocolate with cookies and cream weight: 4.5g' },
 'Snickers': { name: 'Snickers Chocolate', price: 50, emoji: '🍦', imgUrl: 'snickers.webp', desc: 'Peanuts, nougat and caramel chocolate weight: 14g' },
 'cadbury-drinking': { name: 'Cadbury Drinking Chocolate', price: 1240, emoji: '😋', imgUrl: 'cadbury-drinking.webp', desc: 'Premium chocolate drink mix coffee weight: 500gm' },
     
